@@ -406,7 +406,7 @@ function getStoryTitle(subjectId, storyId) {
       "time-traveler": "The Time Traveler"
     },
     "mystery": {
-      "haunted-mansion": "The Haunted Mansion",
+      "haunted-mansion": "The Timekeeper’s Journal",
       "missing-artifact": "The Missing Artifact",
       "detective-case": "The Detective's Case"
     },
