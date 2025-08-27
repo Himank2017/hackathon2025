@@ -7,7 +7,7 @@ const STORIES = {
       "start": {
         "text": "You wake up at the edge of an ancient, mysterious forest. The trees tower above you, their leaves rustling with secrets. Two paths stretch before you: one winding to the left through a dense grove of silver birch trees, the other to the right beside a carpet of wildflowers. Which path calls to you?",
         "choices": [
-          { "text": "Take the path through the silver birch trees.. gg", "next": "leftPath" },
+          { "text": "Take the path through the silver birch trees.. ", "next": "leftPath" },
           { "text": "Follow the trail of wildflowers", "next": "rightPath" }
         ]
       },
