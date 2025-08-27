@@ -91,9 +91,9 @@ graph TD
 4. **Multiple Endings**: Your choices can lead to different endings
 5. **Educational Content**: Every story teaches real school subjects
 
-## 💡 How I Built It
+## 💡 How We Built It
 
-### 🔧 Technologies I Learned
+### 🔧 Technologies We Learned
 
 As a 6th grader, I learned many exciting technologies to build this app:
 
