@@ -510,6 +510,114 @@ const STORIES = {
   
   // Historical subject stories
   historical: {
+    "integer-kingdom": {
+      "start": {
+        "text": "Welcome to the Kingdom of Integers! 👑 A magical realm divided into three great regions: the sunny Positive Plains, the mysterious Negative Valley, and at the center, Zero City. King Zero rules from his throne on the Number Line Bridge. Which region would you like to explore first?",
+        "choices": [
+          { "text": "Visit the Positive Plains", "next": "positivePlains" },
+          { "text": "Venture into Negative Valley", "next": "negativeValley" }
+        ]
+      },
+      "positivePlains": {
+        "text": "In the bright Positive Plains ☀️, you find citizens celebrating! Sir +1 dances merrily while +2 and +3 race toward +10. Sir +5 boasts, 'Life is wonderful when you move forward! The further we go, the greater we become!' But suddenly, troubling news arrives...",
+        "choices": [
+          { "text": "Learn about the conflict", "next": "conflictBegins" }
+        ]
+      },
+      "negativeValley": {
+        "text": "In the shadowy Negative Valley 🌙, you find Lady -1 and Lord -5 discussing their concerns. 'Those Positives think they're the best,' Lady -1 frowns. 'They forget that for every step forward, we take one backward. Without us, there would be no balance!'",
+        "choices": [
+          { "text": "Join the gathering conflict", "next": "conflictBegins" }
+        ]
+      },
+      "conflictBegins": {
+        "text": "Both groups march to the Number Line Bridge in Zero City! +7 shouts about being bigger and brighter, while -7 argues back. The argument grows until King Zero raises his royal staff. 'SILENCE!' he commands. ⚔️",
+        "choices": [
+          { "text": "Listen to King Zero's wisdom", "next": "kingsWisdom" }
+        ]
+      },
+      "kingsWisdom": {
+        "text": "'This kingdom survives because of balance,' King Zero declares. 'Without Negatives, Positives would tip over. Without Positives, Negatives would drift away. And without me, there would be no center! Shall we play the Game of Addition to prove it?' 👑",
+        "choices": [
+          { "text": "Play the Game of Addition", "next": "additionGame" }
+        ]
+      },
+      "additionGame": {
+        "text": "The King pairs opposite numbers together. When +3 joins hands with -3, POOF! They vanish into Zero! 💫 The same happens with +5 and -5, +10 and -10. Everyone watches in amazement as opposites create perfect balance.",
+        "choices": [
+          { "text": "Try another experiment", "next": "finalLesson" }
+        ]
+      },
+      "finalLesson": {
+        "text": "King Zero then demonstrates what happens with unpaired numbers. +4 steps forward alone, and stays positive! 'See?' says the King. 'Without your opposite, you remain yourself. But together, you create balance. This is the foundation of integer addition and subtraction!' ✨",
+        "choices": [
+          { "text": "Learn about applications", "next": "integerExit" }
+        ]
+      },
+      "integerExit": {
+        "text": "From that day forward, Positives and Negatives worked together in harmony, building bridges, helping Fractions find homes, and becoming the foundation of Algebra! The Kingdom of Integers stretches forever in both directions, proving that every number—positive or negative—has an important role to play. THE END. ⚖️",
+        "choices": [
+          { "text": "Start a new adventure", "next": "start" }
+        ]
+      }
+    },
+    "fraction-friends": {
+      "start": {
+        "text": "Welcome to the magical land of Mathville! 🏰 You'll join three best friends known as the Fraction Friends: Fiona the Fox 🦊, Benny the Bear 🐻, and Lila the Lamb 🐑. They're heading to Chef Fraction's Pie Shop, hungry for a delicious adventure! How would you like to help them?",
+        "choices": [
+          { "text": "Help share the first pie", "next": "sharePie" },
+          { "text": "Learn about fractions", "next": "learnFractions" }
+        ]
+      },
+      "sharePie": {
+        "text": "Chef Fraction places a giant pie on the table. 🥧 Fiona suggests cutting it in half, but Benny growls that it won't be fair with three friends. 'We need to think about this carefully,' says Lila. What should they try?",
+        "choices": [
+          { "text": "Cut into thirds", "next": "thirdsPie" }
+        ]
+      },
+      "learnFractions": {
+        "text": "Fiona explains that fractions help share things fairly. She draws on a napkin: 'Look, if we cut something in half, each piece is 1/2. If we cut it in three, each piece is 1/3!' The others watch with interest. 📝",
+        "choices": [
+          { "text": "Try sharing the pie", "next": "thirdsPie" }
+        ]
+      },
+      "thirdsPie": {
+        "text": "Benny carefully cuts the pie into three equal parts, giving each friend 1/3. 'Now it's fair!' But after eating their shares, Lila is still hungry. Chef Fraction offers to bake another pie! 🥧",
+        "choices": [
+          { "text": "Explore equivalent fractions", "next": "equivalentFractions" }
+        ]
+      },
+      "equivalentFractions": {
+        "text": "The new pie is cut into 6 equal pieces. Each friend takes 2 pieces (2/6). Fiona notices something interesting: 'Hey, 2/6 looks the same as 1/3 from before!' Benny exclaims, 'That's called equivalent fractions!' ✨",
+        "choices": [
+          { "text": "Try adding fractions", "next": "addingFractions" }
+        ]
+      },
+      "addingFractions": {
+        "text": "Benny spots 8 cookies 🍪 and creates a puzzle: 'If I eat 1/4 and Fiona eats 2/8, how much is that together?' Lila thinks carefully. 'Well, 1/4 equals 2/8, so together that's 4/8, which is the same as 1/2!'",
+        "choices": [
+          { "text": "Compare different fractions", "next": "compareFractions" }
+        ]
+      },
+      "compareFractions": {
+        "text": "Chef Fraction brings out three fruit tarts, cut differently: one in quarters (1/4), one in eighths (1/8), and one in halves (1/2). 'Who can pick the biggest piece?' he challenges. 🥧",
+        "choices": [
+          { "text": "Help choose the biggest piece", "next": "solvePuzzle" }
+        ]
+      },
+      "solvePuzzle": {
+        "text": "Fiona chooses 1/2, Benny picks 1/4, and Lila takes 1/8. By comparing the pieces, it's clear that 1/2 is bigger than both 1/4 and 1/8! Fiona wins the challenge and learns about comparing fractions. 🏆",
+        "choices": [
+          { "text": "Celebrate and review", "next": "fractionExit" }
+        ]
+      },
+      "fractionExit": {
+        "text": "What a delicious adventure! The Fraction Friends learned that fractions help share things fairly, can be equivalent even when they look different, can be added together, and can be compared. Most importantly, they discovered that 'Fractions make life fair and fun!' THE END. 🥧✨",
+        "choices": [
+          { "text": "Start a new adventure", "next": "start" }
+        ]
+      }
+    },
     "kingdom-of-numbers": {
       "start": {
         "text": "Welcome to the Kingdom of Numbers! 👑 You'll join two adventurous friends: Factorina, who loves breaking numbers into smaller pieces, and Multiplo, who enjoys making numbers grow bigger. One morning, a royal messenger announces an exciting challenge from the Number King about the mysterious number 36! Which friend would you like to follow?",
@@ -636,6 +744,8 @@ function getStoryTitle(subjectId, storyId) {
       "timekeepers-journal": "The Timekeeper's Journal"
     },
     "historical": {
+      "integer-kingdom": "The Kingdom of Integers: The Battle for Balance",
+      "fraction-friends": "The Fraction Friends' Big Feast",
       "kingdom-of-numbers": "The Kingdom of Numbers"
     }
   };
@@ -661,6 +771,8 @@ function getStoryDescription(subjectId, storyId) {
       "timekeepers-journal": "Join Tara on a magical journey to learn about chronology and the importance of keeping records."
     },
     "historical": {
+      "integer-kingdom": "Explore the magical realm where positive and negative numbers learn about balance and harmony under King Zero's wisdom.",
+      "fraction-friends": "Join Fiona Fox, Benny Bear, and Lila Lamb on a delicious adventure learning about fractions at Chef Fraction's Pie Shop.",
       "kingdom-of-numbers": "Join Factorina and Multiplo on a magical quest to discover factors and multiples in the Kingdom of Numbers."
     }
   };
