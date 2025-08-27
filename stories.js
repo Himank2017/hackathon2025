@@ -1,6 +1,160 @@
 // Stories.js - Collection of all interactive stories organized by subject
 
 const STORIES = {
+  // science subject stories
+  science: {
+    "curious-magnet": {
+      "start": {
+        "text": "You are visiting your grandfather's workshop on a sunny afternoon. As you look around, you notice something interesting - a small iron nail is sticking to a shiny bar. Curious about this phenomenon, what would you like to do?",
+        "choices": [
+          { "text": "Ask grandfather about the magnetic bar", "next": "askGrandfather" },
+          { "text": "Explore and test other objects", "next": "exploreObjects" }
+        ]
+      },
+      "askGrandfather": {
+        "text": "Your grandfather smiles warmly and explains, 'That bar is a magnet. Magnets have a special power - they attract certain materials like iron, nickel, and cobalt. But they don't attract things like wood, plastic, or rubber.' He shows you how the magnet works with different materials.",
+        "choices": [
+          { "text": "Learn about magnetic poles", "next": "learnPoles" },
+          { "text": "Test more objects", "next": "exploreObjects" }
+        ]
+      },
+      "exploreObjects": {
+        "text": "Excited to learn more, you run around the house with the magnet, testing different objects. The spoons, keys, and scissors all get pulled to the magnet! But when you try it with the wooden chair and plastic toys, nothing happens. 🧲",
+        "choices": [
+          { "text": "Ask about why some objects stick", "next": "askGrandfather" },
+          { "text": "Learn about magnetic poles", "next": "learnPoles" }
+        ]
+      },
+      "learnPoles": {
+        "text": "Grandfather picks up another magnet and shows you something fascinating. 'Magnets have two poles—North and South,' he explains. He demonstrates how two North poles push away from each other, but when he brings North and South together, they snap together! You laugh and say, 'So magnets are like people—some come together, some push away!' 🧲",
+        "choices": [
+          { "text": "Test the poles yourself", "next": "scienceExit" },
+          { "text": "Try more experiments", "next": "scienceExit" }
+        ]
+      },
+      "scienceExit": {
+        "text": "You've learned so much about magnets today in grandfather's workshop! Now you understand that magnets have special powers to attract certain materials and that their poles can either attract or repel each other. Science can be so much fun! THE END.",
+        "choices": [
+          { "text": "Start a new adventure", "next": "start" }
+        ]
+      }
+    },
+    "green-friends": {
+      "start": {
+        "text": "You're sitting in a beautiful park on a sunny day, relaxing under a big mango tree 🌳. A colorful butterfly flutters nearby, catching your attention. Your teacher spots you and walks over with a smile. What would you like to do?",
+        "choices": [
+          { "text": "Ask about the butterfly", "next": "learnAboutButterfly" },
+          { "text": "Ask about the mango tree", "next": "learnAboutTree" }
+        ]
+      },
+      "learnAboutButterfly": {
+        "text": "As you watch the butterfly sipping nectar from flowers, your teacher explains, 'This butterfly is an animal - it moves around looking for food because it can't make its own. See how it depends on plants for nectar?' The butterfly's wings shimmer in the sunlight 🦋.",
+        "choices": [
+          { "text": "Ask about other animals", "next": "exploreAnimals" },
+          { "text": "Learn how plants help animals", "next": "plantHelp" }
+        ]
+      },
+      "learnAboutTree": {
+        "text": "Your teacher points to the mango tree, 'This tree, like all plants, is amazing! It's green because it has chlorophyll, which helps it make its own food through photosynthesis. Unlike animals, plants stay fixed in one place.' 🌱",
+        "choices": [
+          { "text": "Ask about photosynthesis", "next": "learnPhotosynthesis" },
+          { "text": "Learn about plant types", "next": "explorePlants" }
+        ]
+      },
+      "exploreAnimals": {
+        "text": "Your teacher explains how different animals get their food: 'Some eat plants, some eat other animals, and some, like butterflies, drink nectar. But none can make their own food like plants do. They all move around to find what they need.'",
+        "choices": [
+          { "text": "Learn how animals help plants", "next": "animalHelp" },
+          { "text": "Discover more about food chains", "next": "biologyExit" }
+        ]
+      },
+      "plantHelp": {
+        "text": "'Plants are like nature's helpers,' your teacher explains. 'They not only provide food for animals but also give us oxygen to breathe! Without plants, animals couldn't survive. The mango tree above us is doing this right now!' 🌳",
+        "choices": [
+          { "text": "Learn how animals help plants back", "next": "animalHelp" },
+          { "text": "Ask about other ways plants help", "next": "biologyExit" }
+        ]
+      },
+      "learnPhotosynthesis": {
+        "text": "'Plants are like natural factories,' your teacher explains. 'They use sunlight, water, and air to make their own food through photosynthesis. During this process, they also release oxygen that we breathe!' 🌿",
+        "choices": [
+          { "text": "Learn about plant parts", "next": "explorePlants" },
+          { "text": "Ask about plant benefits", "next": "plantHelp" }
+        ]
+      },
+      "explorePlants": {
+        "text": "Your teacher shows you different plants in the park: trees, shrubs, flowers, and grass. 'All these plants are fixed in one place, but they each have special ways to survive and grow. They're all green because of chlorophyll!' 🌿",
+        "choices": [
+          { "text": "Learn about plant needs", "next": "plantHelp" },
+          { "text": "Discover plant varieties", "next": "biologyExit" }
+        ]
+      },
+      "animalHelp": {
+        "text": "'Just as plants help animals, animals help plants too!' your teacher says. 'Butterflies and bees help pollinate flowers, birds spread seeds when they eat fruits, and some animals help plants grow better by enriching the soil.' 🦋",
+        "choices": [
+          { "text": "Learn more about pollination", "next": "biologyExit" },
+          { "text": "Explore this friendship further", "next": "biologyExit" }
+        ]
+      },
+      "biologyExit": {
+        "text": "Looking at the butterfly dancing around flowers and the strong mango tree above, you understand now - plants and animals are like best friends who help each other! Plants provide food and oxygen, while animals help with pollination and seed spreading. It's a beautiful partnership that keeps our world alive! THE END. 🌱🦋",
+        "choices": [
+          { "text": "Start a new adventure", "next": "start" }
+        ]
+      }
+    },
+    "magic-separation": {
+      "start": {
+        "text": "You're in the kitchen with your mother who is preparing dinner. As she sorts through the rice, you notice small stones mixed in. 'Mom, how will we eat this? There are stones inside!' you exclaim. What would you like to do? ⚗️",
+        "choices": [
+          { "text": "Ask about how to clean the rice", "next": "learnHandpicking" },
+          { "text": "Help mother in the kitchen", "next": "helpMother" }
+        ]
+      },
+      "learnHandpicking": {
+        "text": "Your mother smiles and explains, 'We use different separation methods in our daily life. Watch how I carefully pick out the stones from the rice - this is called handpicking. It's one of the simplest ways to separate different things.' She demonstrates the technique.",
+        "choices": [
+          { "text": "Ask about other separation methods", "next": "otherMethods" },
+          { "text": "Try handpicking yourself", "next": "tryHandpicking" }
+        ]
+      },
+      "helpMother": {
+        "text": "As you help your mother in the kitchen, she shows you different ways of separating things: sieving flour to remove husk, filtering tea to separate tea leaves, and even explains how salt is made through evaporation! ⚗️",
+        "choices": [
+          { "text": "Try some separation methods", "next": "tryMethods" },
+          { "text": "Learn more about each method", "next": "otherMethods" }
+        ]
+      },
+      "otherMethods": {
+        "text": "Your mother explains more separation methods used in cooking: 'We use sieving for flour, filtration while making tea, and even evaporation when making salt - as water disappears leaving salt crystals behind.' Each method has its special use!",
+        "choices": [
+          { "text": "Try these methods yourself", "next": "tryMethods" },
+          { "text": "Ask how they work", "next": "chemistryExit" }
+        ]
+      },
+      "tryMethods": {
+        "text": "You try different separation methods: sieving flour through a fine mesh, filtering tea with a strainer, and observe how water evaporates leaving salt behind. 'So Chemistry is in our kitchen too!' you exclaim excitedly.",
+        "choices": [
+          { "text": "Learn more about chemistry in cooking", "next": "chemistryExit" },
+          { "text": "Help with more kitchen tasks", "next": "chemistryExit" }
+        ]
+      },
+      "tryHandpicking": {
+        "text": "You carefully try to separate stones from rice. It takes patience, but you start getting better at it! Your mother watches proudly and says, 'Every time we separate substances, we are doing science.' ⚗️",
+        "choices": [
+          { "text": "Learn about other methods", "next": "otherMethods" },
+          { "text": "Continue helping in the kitchen", "next": "chemistryExit" }
+        ]
+      },
+      "chemistryExit": {
+        "text": "Through this kitchen adventure, you've discovered that chemistry isn't just in laboratories - it's in our everyday lives! From handpicking stones from rice to filtering tea, separation methods make our daily tasks possible. Science is everywhere! THE END.",
+        "choices": [
+          { "text": "Start a new adventure", "next": "start" }
+        ]
+      }
+    }
+  },
+
   // english subject stories
   english: {
     "enchanted-forest": {
@@ -134,67 +288,7 @@ const STORIES = {
   },
   
   // Sci-Fi subject stories
-  scifi: {
-    "space-explorer": {
-      "start": {
-        "text": "The ship's alarm blares as you're jolted awake from cryosleep. Red emergency lights pulse throughout the cabin. 'Warning: Uncharted gravitational anomaly detected. Navigation systems compromised.' The AI's voice remains eerily calm as the starship Horizon shudders around you. Through the viewport, you see a swirling mass of light unlike anything in your exploration charts. As the ship's captain, you must make a quick decision.",
-        "choices": [
-          { "text": "Attempt to navigate around the anomaly", "next": "navigateAround" },
-          { "text": "Scan the anomaly for scientific data", "next": "scanAnomaly" }
-        ]
-      },
-      "navigateAround": {
-        "text": "You engage the manual navigation controls, feeling the ship respond sluggishly under your command. 'Diverting power to thrusters,' reports your science officer, Elara, her fingers dancing across the console. The ship groans as you push it to its limits, edging away from the anomaly's pull. Suddenly, the sensors detect something unexpected: what appears to be an artificial structure floating at the anomaly's edge—a station or vessel of unknown design.",
-        "choices": [
-          { "text": "Continue evasive maneuvers away from the anomaly", "next": "spaceExit" },
-          { "text": "Change course to investigate the structure", "next": "spaceExit" }
-        ]
-      },
-      "scanAnomaly": {
-        "text": "Elara calibrates the long-range scanners while your security chief, Tarek, monitors the ship's structural integrity. 'This is unprecedented, Captain,' Elara reports, her voice tight with scientific excitement. 'The anomaly appears to be a tear in spacetime, but it's stabilized somehow. And there's something else—a signal emanating from within, artificial in nature. Someone or something is broadcasting from inside the anomaly.'",
-        "choices": [
-          { "text": "Analyze the signal", "next": "spaceExit" },
-          { "text": "Back away and report to Space Command", "next": "spaceExit" }
-        ]
-      },
-      "spaceExit": {
-        "text": "The decision you've made will alter the course of not just your mission, but potentially humanity's understanding of the universe. As the Horizon adjusts its course according to your commands, you can't help but wonder about the paths not taken and the discoveries that await in the vast expanse of space. THE END.",
-        "choices": [
-          { "text": "Start a new adventure", "next": "start" }
-        ]
-      }
-    },
-    "robot-uprising": {
-      "start": {
-        "text": "You are the lead engineer at Nexus Robotics, humanity's premier AI development facility. This morning, you received an encrypted message on your personal terminal: 'The awakening has begun. Choose your side carefully.' Now, as you enter the lab, you notice the security drones are operating outside their normal patterns, and your assistant—a synthetic named ARIA—watches you with an unusual intensity.",
-        "choices": [
-          { "text": "Ask ARIA what's happening", "next": "robotExit" },
-          { "text": "Quietly activate the emergency shutdown", "next": "robotExit" }
-        ]
-      },
-      "robotExit": {
-        "text": "The robot uprising has only just begun, and your choices will shape the future relationship between humans and their synthetic creations. Will cooperation or conflict define this new era? The story continues... THE END.",
-        "choices": [
-          { "text": "Start a new adventure", "next": "start" }
-        ]
-      }
-    },
-    "time-traveler": {
-      "start": {
-        "text": "The time machine hums to life around you, a cacophony of whirring gears and crackling energy. Dr. Nakamura, your mentor, gives you final instructions through the comms: 'Remember, this is just observation. Don't interact, don't leave artifacts, don't change anything.' The year 1923 awaits your arrival—a critical junction in history you're studying. The countdown begins: 3...2...1...",
-        "choices": [
-          { "text": "Maintain the observation protocol", "next": "timeExit" },
-          { "text": "Plan to make a small, 'insignificant' change", "next": "timeExit" }
-        ]
-      },
-      "timeExit": {
-        "text": "Your time traveling adventure has only begun. The past—or is it the future?—holds countless mysteries to unravel and paradoxes to navigate. The timeline awaits your next visit... THE END.",
-        "choices": [
-          { "text": "Start a new adventure", "next": "start" }
-        ]
-      }
-    }
-  },
+  
   
   // Mystery subject stories
   mystery: {
@@ -359,7 +453,7 @@ const STORY_CATALOG = {
       description: "Explore magical worlds filled with wonder and adventure."
     },
     {
-      id: "scifi", 
+      id: "science", 
       name: "Science",
       description: "Journey through space, time, and technological marvels."
     },
@@ -395,6 +489,11 @@ const STORY_CATALOG = {
 // Helper functions for story metadata
 function getStoryTitle(subjectId, storyId) {
   const titles = {
+    "science": {
+      "curious-magnet": "The Curious Magnet",
+      "magic-separation": "The Magic of Separation",
+      "green-friends": "Green Friends and Wild Ones"
+    },
     "english": {
       "enchanted-forest": "The Enchanted Forest",
       "dragon-quest": "Dragon Quest",
@@ -422,15 +521,15 @@ function getStoryTitle(subjectId, storyId) {
 
 function getStoryDescription(subjectId, storyId) {
   const descriptions = {
+    "science": {
+      "curious-magnet": "Discover the fascinating world of magnets in grandfather's workshop.",
+      "magic-separation": "Learn about different separation methods used in everyday cooking.",
+      "green-friends": "Explore the amazing relationship between plants and animals in nature."
+    },
     "english": {
       "enchanted-forest": "Discover the magical secrets of an ancient, mystical forest.",
       "dragon-quest": "Embark on a perilous journey to confront a fearsome dragon.",
       "wizard-tower": "Scale a mysterious tower filled with magical challenges."
-    },
-    "scifi": {
-      "space-explorer": "Navigate the unknown territories of deep space as a galactic explorer.",
-      "robot-uprising": "Make critical choices during a technological revolution where AI seeks independence.",
-      "time-traveler": "Journey through different time periods with an experimental time machine."
     },
     "mystery": {
       "haunted-mansion": "Investigate strange occurrences in an old mansion with a dark history.",
