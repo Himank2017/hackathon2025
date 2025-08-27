@@ -233,6 +233,7 @@
     const subjectLoading = document.getElementById('subjectLoading');
     const storyLoading = document.getElementById('storyLoading');
     
+    
     // Current story data
     let currentStoryData = null;
     
@@ -381,7 +382,7 @@
           btn.className = "choice-btn";
           btn.onclick = () => showNode(choice.next);
           choicesDiv.appendChild(btn);
-        });
+        }); 
         
         // Fade in effect
         storyTextContainer.style.opacity = 1;
@@ -397,7 +398,7 @@
       // Make the text more readable with paragraphs
       text = text.replace(/\n/g, '<br>');
       
-      return text;
+      return text ;
     }
 
     // Verify story data is loaded properly
