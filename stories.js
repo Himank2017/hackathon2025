@@ -292,60 +292,215 @@ const STORIES = {
   
   // Mystery subject stories
   mystery: {
-    "haunted-mansion": {
+    "grid-adventure": {
       "start": {
-        "text": "The gates of Blackwood Manor creak open as you approach, though you don't recall touching them. Rain pours down relentlessly as thunder rumbles in the distance. As a private investigator hired by the manor's new owner, you're here to investigate reports of strange occurrences that have prevented renovation work from proceeding. The mansion looms before you, its windows like hollow eyes in the growing darkness. The caretaker who was supposed to meet you is nowhere to be seen.",
+        "text": "The sea sparkles as you join Maya and her friends—Sam, Aisha, and Leo—stepping onto the golden sands of Map Island 🏝️. Maya holds a mysterious map filled with squares marked with letters and numbers. 'Look!' Maya exclaims, 'It's a grid map! The first clue says: D4.' What would you like to do?",
         "choices": [
-          { "text": "Enter through the main door", "next": "mainEntrance" },
-          { "text": "Circle around to look for another entrance", "next": "circleAround" }
+          { "text": "Study the grid map", "next": "exploreMap" },
+          { "text": "Search the beach", "next": "searchBeach" }
         ]
       },
-      "mainEntrance": {
-        "text": "The massive oak door swings open at your touch, revealing a grand foyer covered in dust and cobwebs. A crystal chandelier hangs precariously overhead, several of its pieces missing. The air is noticeably colder inside, your breath forming small clouds. As the door closes behind you with a resounding thud, you notice two directions you could explore: a sweeping staircase leading to the upper floor, or a darkened corridor to what might be the mansion's east wing.",
+      "exploreMap": {
+        "text": "You examine the grid map with Maya. It shows coordinates A-H across the top and 1-8 down the side. 'We need to trace across to D, then down to 4,' Maya explains. 'That's how grid coordinates work!' 🗺️",
         "choices": [
-          { "text": "Climb the staircase", "next": "mysteryExit" },
-          { "text": "Explore the east wing corridor", "next": "mysteryExit" }
+          { "text": "Head to coordinate D4", "next": "coconutTree" }
         ]
       },
-      "circleAround": {
-        "text": "You make your way around the mansion's perimeter, flashlight in hand. The overgrown gardens seem to shift in the beam's light, creating unsettling shadows. Around the back, you discover a servant's entrance leading to what must be the kitchen. Nearby, partially hidden by ivy, is a cellar door set into the ground. Both could provide access to the mansion.",
+      "searchBeach": {
+        "text": "While searching the beach, you notice footprints in the sand - you're not alone on this island! Sam spots a tall coconut tree in the distance. 'That must be at coordinate D4!' he says excitedly.",
         "choices": [
-          { "text": "Enter through the kitchen", "next": "mysteryExit" },
-          { "text": "Check out the cellar", "next": "mysteryExit" }
+          { "text": "Go to the coconut tree", "next": "coconutTree" }
         ]
       },
-      "mysteryExit": {
-        "text": "As you delve deeper into Blackwood Manor's secrets, you can't shake the feeling that something is watching you, evaluating your every move. The mystery of this place has only begun to unfold, and you wonder if you'll emerge with answers—or if you'll emerge at all. THE END.",
+      "coconutTree": {
+        "text": "Beneath the tall coconut tree at D4 🌴, you find a flat rock. Digging underneath reveals a small wooden box containing seashell necklaces and a note: 'Next: B2, where the waves kiss the stones.' Suddenly, you hear rustling in the bushes!",
+        "choices": [
+          { "text": "Rush to coordinate B2", "next": "rockyShore" }
+        ]
+      },
+      "rockyShore": {
+        "text": "At the rocky shore (B2), waves crash dramatically against dark stones 🌊. Maya spots a glass bottle wedged between rocks. Inside is a scroll: 'For riches untold, seek E5. Beware—others want what you seek.' In the distance, you glimpse two shadowy figures watching your group.",
+        "choices": [
+          { "text": "Hurry to coordinate E5", "next": "hiddenClearing" }
+        ]
+      },
+      "hiddenClearing": {
+        "text": "The clearing at E5 is suspiciously quiet. Suddenly, footsteps approach! Leo spots a rope hanging from a tree and yanks it, revealing a trapdoor. Inside, you find an old compass and another note: 'Two more steps. G3, then H8.' The rival treasure hunters are getting closer! 🧭",
+        "choices": [
+          { "text": "Race to the cave at G3", "next": "whisperingCave" }
+        ]
+      },
+      "whisperingCave": {
+        "text": "Inside the dark cave at G3, ocean echoes create mysterious whispers 🌊. Your flashlight reveals wall carvings pointing east. The rivals' voices grow louder outside. 'H8 must be the final location!' Aisha whispers urgently.",
+        "choices": [
+          { "text": "Make the final dash to H8", "next": "treasureCliff" }
+        ]
+      },
+      "treasureCliff": {
+        "text": "You reach the cliff at H8 just in time! Under coral rocks, you help uncover a massive chest filled with gold coins, a sparkling crown, and the legendary Golden Pearl ✨. The rivals arrive moments too late. Maya grins, 'The grid system helped us win. Every coordinate was a key to the puzzle!'",
+        "choices": [
+          { "text": "Celebrate your victory", "next": "gridExit" }
+        ]
+      },
+      "gridExit": {
+        "text": "As you sail home with your friends, the treasure secured and Map Island fading into the distance 🏝️, you realize that understanding grid coordinates was the real key to your success. The rivals remain on the shore, already planning their next adventure, but thanks to your knowledge of grids and coordinates, you're already victorious! THE END.",
         "choices": [
           { "text": "Start a new adventure", "next": "start" }
         ]
       }
     },
-    "missing-artifact": {
+    "balance-of-life": {
       "start": {
-        "text": "The National Museum's director wrings his hands nervously as he leads you into the empty display room. 'It happened last night—the Obsidian Scarab, gone without a trace. No alarms triggered, no cameras captured anything, no signs of forced entry.' You've been called in as a specialist in recovering stolen antiquities. 'The Egyptian exhibition opens in three days,' he continues. 'If word gets out that we've lost the centerpiece...'",
+        "text": "Welcome to the peaceful village of Sundarpur! 🌅 Here, you'll meet Aman, a hardworking farmer, and his best friend Ravi, a caring young man. They often meet at the riverbank after their daily tasks. Who would you like to follow first?",
         "choices": [
-          { "text": "Examine the empty display case", "next": "artifactExit" },
-          { "text": "Request the security footage", "next": "artifactExit" }
+          { "text": "Follow Aman's day", "next": "amanDay" },
+          { "text": "Follow Ravi's day", "next": "raviDay" }
         ]
       },
-      "artifactExit": {
-        "text": "The case of the missing Obsidian Scarab promises to be one of your most challenging yet. With multiple suspects, conflicting clues, and the possibility of ancient curses at play, you'll need all your detective skills to recover the priceless artifact. THE END.",
+      "amanDay": {
+        "text": "You follow Aman as he starts his day. The sun rises as he heads to his fields 🌄. He plows the earth, sows seeds, and waters the crops carefully. Later, he goes to the market with fresh vegetables. 'This is an economic activity,' Aman explains. 'It helps me earn money for my family.'",
+        "choices": [
+          { "text": "Visit the market", "next": "marketScene" }
+        ]
+      },
+      "raviDay": {
+        "text": "You join Ravi as he starts his morning. He helps his mother cook breakfast in the kitchen 🍳, then sits with his little sister Meera under a tree, teaching her to read and write. 'This is a non-economic activity,' Ravi explains with a smile. 'I do it out of love for my family.'",
+        "choices": [
+          { "text": "Join the teaching", "next": "teachingScene" }
+        ]
+      },
+      "marketScene": {
+        "text": "At the bustling market, Aman arranges his fresh vegetables 🥬. You meet Priya, who proudly shows her stitched clothes. 'Economic activities like this help us be independent,' she says. 'With this money, we can support our families and save for the future.'",
+        "choices": [
+          { "text": "Visit the banyan tree", "next": "banyanMeeting" }
+        ]
+      },
+      "teachingScene": {
+        "text": "Under the shade of a tree 🌳, you watch as Ravi patiently helps Meera with her letters. Nearby, Neha teaches a group of children. 'We may not earn money,' she says, 'but sharing knowledge and caring for others brings joy that money can't buy.' 📚",
+        "choices": [
+          { "text": "Visit the banyan tree", "next": "banyanMeeting" }
+        ]
+      },
+      "banyanMeeting": {
+        "text": "Everyone gathers under the ancient banyan tree 🌳. Grandfather Hari sits with his walking stick, watching the group with wise eyes. The setting sun casts a golden glow as he prepares to share his wisdom about life's balance.",
+        "choices": [
+          { "text": "Listen to Grandfather Hari", "next": "grandfatherWisdom" }
+        ]
+      },
+      "grandfatherWisdom": {
+        "text": "'My children,' says Grandfather Hari, his eyes twinkling, 'economic activities give us money for our needs, but non-economic activities give us love and knowledge. Both are essential for a happy life, just like a bird needs both wings to fly.' ⚖️",
+        "choices": [
+          { "text": "Ask about finding balance", "next": "balanceLesson" },
+          { "text": "Share your understanding", "next": "mysteryEnd" }
+        ]
+      },
+      "balanceLesson": {
+        "text": "Grandfather Hari explains how to balance both aspects of life: 'Work hard to earn, but never forget to spend time with family, help others, and share knowledge. Money fills our pockets, but love and kindness fill our hearts.' ❤️",
+        "choices": [
+          { "text": "Promise to maintain balance", "next": "mysteryEnd" },
+          { "text": "Thank everyone for the lesson", "next": "mysteryEnd" }
+        ]
+      },
+      "mysteryEnd": {
+        "text": "As the sun sets behind the banyan tree 🌅, you understand the important lesson: money helps us live, but love and care make life worth living. Both economic and non-economic activities create the perfect balance for a happy life. Like the balanced scale - coins on one side, heart and knowledge on the other - both are essential for true happiness. THE END. ⚖️",
         "choices": [
           { "text": "Start a new adventure", "next": "start" }
         ]
       }
     },
-    "detective-case": {
+    "timekeepers-journal": {
       "start": {
-        "text": "The body was discovered at dawn, arranged with theatrical precision in the city's central plaza. Detective Chen called you specifically—this has all the hallmarks of the Composer, a serial killer who's evaded capture for two years. As the department's criminal psychologist, you've been tracking this case from the beginning. 'There's something different this time,' Chen says quietly. 'He left a note addressed to you.'",
+        "text": "You are Tara, a curious 10-year-old exploring your Grandma June's attic on a rainy afternoon. In a dusty corner, you spot an intriguing wooden box. What would you like to do? 📚",
         "choices": [
-          { "text": "Read the note immediately", "next": "detectiveExit" },
-          { "text": "Examine the crime scene first", "next": "detectiveExit" }
+          { "text": "Open the box and look inside", "next": "openBox" },
+          { "text": "Ask Grandma about the box", "next": "askGrandma" }
         ]
       },
-      "detectiveExit": {
-        "text": "The cat-and-mouse game between you and the Composer has entered a new, dangerous phase. As you delve deeper into the killer's psychology, you can't shake the feeling that you're being pulled into an elaborately designed trap. The investigation continues... THE END.",
+      "openBox": {
+        "text": "Inside the box, you find a collection of treasures: faded photographs showing familiar faces from different times, old letters with beautiful handwriting, and a mysterious diary. The items seem to tell a story of your family's past.",
+        "choices": [
+          { "text": "Show the items to Grandma", "next": "meetGrandma" },
+          { "text": "Read the diary first", "next": "readDiary" }
+        ]
+      },
+      "askGrandma": {
+        "text": "Grandma June smiles warmly when she sees the box. 'Ah, our family's memory box! These are records of our family's past. They tell our story in the order it happened—that's called chronology.' She sits beside you, ready to share the stories.",
+        "choices": [
+          { "text": "Look through the items together", "next": "meetGrandma" },
+          { "text": "Ask about chronology", "next": "learnChronology" }
+        ]
+      },
+      "meetGrandma": {
+        "text": "As you and Grandma June look through the items, she explains how each piece tells part of your family's story. 'Records like these are precious,' she says. 'They help us remember our past and understand how things changed over time.' ⏳",
+        "choices": [
+          { "text": "Take a nap and dream", "next": "meetChronos" },
+          { "text": "Start organizing the items", "next": "organizeItems" }
+        ]
+      },
+      "readDiary": {
+        "text": "The diary's pages are filled with stories from the past. As your eyes grow heavy reading the fascinating entries, you drift off to sleep, and something magical begins to happen...",
+        "choices": [
+          { "text": "Continue into the dream", "next": "meetChronos" }
+        ]
+      },
+      "meetChronos": {
+        "text": "In your dream, you meet Chronos, a friendly magical clock with a warm smile. 'Hello, Tara! I'm Chronos, the keeper of time,' he says cheerfully. 'Would you like to learn why putting events in order is so important?' ⏰",
+        "choices": [
+          { "text": "Visit the magical library", "next": "visitLibrary" },
+          { "text": "Learn about time keeping", "next": "learnTime" }
+        ]
+      },
+      "learnChronology": {
+        "text": "Grandma explains that chronology is like a story's timeline. 'Just as every story has a beginning, middle, and end, our lives have events that happen in a specific order. Understanding this order helps us make sense of our history.'",
+        "choices": [
+          { "text": "Make your own timeline", "next": "createTimeline" },
+          { "text": "Take a nap and dream", "next": "meetChronos" }
+        ]
+      },
+      "visitLibrary": {
+        "text": "Chronos takes you to a magical library where you meet Eli, a young librarian. The shelves are filled with glowing books, each containing memories and records perfectly organized by time. Eli shows you how everything is arranged to tell clear stories. 📚",
+        "choices": [
+          { "text": "Explore the family records", "next": "exploreRecords" },
+          { "text": "Learn about organization", "next": "learnOrganization" }
+        ]
+      },
+      "learnTime": {
+        "text": "Chronos shows you what happens when time records get mixed up - pictures from different years jumble together, and stories lose their meaning. 'See?' he says, 'When we keep things in order, we can understand how one event leads to another.'",
+        "choices": [
+          { "text": "Fix the mixed-up records", "next": "fixRecords" },
+          { "text": "Visit the library", "next": "visitLibrary" }
+        ]
+      },
+      "createTimeline": {
+        "text": "You decide to create your own timeline. You write down important dates: '2015 – My 1st day of school, 2018 – Our family trip, 2023 – Got my pet cat Luna.' Grandma beams with pride at your organization skills.",
+        "choices": [
+          { "text": "Add more memories", "next": "mysteryEnding" },
+          { "text": "Share with family", "next": "mysteryEnding" }
+        ]
+      },
+      "exploreRecords": {
+        "text": "In the library, you find a shelf labeled 'Family Events: 1950–2020'. Each book shows how your family's story unfolded over time. You realize that keeping records helps preserve precious memories for future generations.",
+        "choices": [
+          { "text": "Create your own record", "next": "mysteryEnding" },
+          { "text": "Thank Eli and Chronos", "next": "mysteryEnding" }
+        ]
+      },
+      "learnOrganization": {
+        "text": "Eli shows you different ways to organize memories: by date, by person, by event type. 'When we organize records,' he explains, 'we're not just keeping things tidy - we're making sure stories can be found and shared.' 📅",
+        "choices": [
+          { "text": "Practice organizing", "next": "mysteryEnding" },
+          { "text": "Create a memory box", "next": "mysteryEnding" }
+        ]
+      },
+      "fixRecords": {
+        "text": "Working with Chronos, you put the mixed-up records back in order. As each piece finds its proper place, the stories become clear again. You understand now why keeping things in chronological order is so important.",
+        "choices": [
+          { "text": "Wake up and organize", "next": "mysteryEnding" },
+          { "text": "Learn more from Chronos", "next": "mysteryEnding" }
+        ]
+      },
+      "mysteryEnding": {
+        "text": "Whether in dreams or reality, you've discovered the importance of keeping memories in order. Now you know that chronology isn't just about dates - it's about preserving stories and understanding how the past shapes our present. You decide to continue adding to your family's records, ensuring your own story will be remembered too. THE END. 📚⏳",
         "choices": [
           { "text": "Start a new adventure", "next": "start" }
         ]
@@ -355,87 +510,58 @@ const STORIES = {
   
   // Historical subject stories
   historical: {
-    "ancient-egypt": {
+    "kingdom-of-numbers": {
       "start": {
-        "text": "The year is 1237 BCE, during the reign of Ramesses II. As a scribe from a respectable family, you've been summoned to the royal palace in Thebes. The grand vizier himself awaits your arrival in the reception hall, his face grave. 'The Pharaoh has received troubling reports from our southern border,' he explains. 'A caravan bearing precious goods and diplomatic scrolls has vanished in Nubia. The Pharaoh requires someone of intelligence and discretion to investigate—someone who will not inflame tensions with the Nubian king.' He studies you carefully. 'Will you serve Egypt in this matter?'",
+        "text": "Welcome to the Kingdom of Numbers! 👑 You'll join two adventurous friends: Factorina, who loves breaking numbers into smaller pieces, and Multiplo, who enjoys making numbers grow bigger. One morning, a royal messenger announces an exciting challenge from the Number King about the mysterious number 36! Which friend would you like to follow?",
         "choices": [
-          { "text": "Accept the mission to Nubia", "next": "acceptMission" },
-          { "text": "Suggest someone more qualified", "next": "suggestOther" }
+          { "text": "Join Factorina to find factors", "next": "factorinaPath" },
+          { "text": "Follow Multiplo to explore multiples", "next": "multiploPath" }
         ]
       },
-      "acceptMission": {
-        "text": "The vizier nods approvingly. 'Wise choice. Egypt rewards loyalty.' He presents you with a royal seal that will grant you authority in your investigation. 'You will travel with a small merchant caravan as cover. The captain of the guard has assigned two soldiers to accompany you, disguised as your servants.' He lowers his voice. 'There are two theories about the disappearance: either Nubian raiders are responsible, or perhaps someone in our own diplomatic corps has betrayed us. Investigate both possibilities with equal vigor.'",
+      "factorinaPath": {
+        "text": "Factorina's eyes sparkle as she explains, 'Big numbers have small secrets! Let's find all the factors of 36 - numbers that divide it without leftovers.' She starts writing with her magic chalk: 1 × 36, 2 × 18, 3 × 12, 4 × 9, 6 × 6... 🔢",
         "choices": [
-          { "text": "Focus on the Nubian raider theory first", "next": "nubianTheory" },
-          { "text": "Start by examining possible Egyptian betrayal", "next": "betrayalTheory" }
+          { "text": "Help list all factors", "next": "findFactors" }
         ]
       },
-      "suggestOther": {
-        "text": "'Perhaps someone with military experience...' you begin, but the vizier cuts you off with a sharp gesture. 'The Pharaoh does not seek a warrior, but a keen mind that notices what others miss. Besides,' his eyes narrow, 'this is not a request but a command from the Living Horus himself.' His tone softens slightly. 'You were specifically recommended for your knowledge of languages and diplomatic protocol. This mission requires subtlety, not strength.'",
+      "multiploPath": {
+        "text": "Multiplo grins and says, 'Why stop at small when you can make things huge! Let's see how far we can make 6 grow.' He starts chanting: '6, 12, 18, 24, 30, 36...' His eyes shine as the numbers keep getting bigger. 📈",
         "choices": [
-          { "text": "Accept the mission reluctantly", "next": "acceptMission" },
-          { "text": "Ask what happens if you refuse", "next": "refuseConsequences" }
+          { "text": "Explore multiples", "next": "exploreMultiples" }
         ]
       },
-      "refuseConsequences": {
-        "text": "The vizier's expression hardens. 'To refuse a direct command from Pharaoh would bring shame to your family for generations. Your father would lose his position, your siblings their prospects. You yourself would be assigned to the quarries in the eastern desert.' He pauses. 'I recommended you because I believed in your abilities. Do not make me regret that judgment.'",
+      "findFactors": {
+        "text": "'Look what we found!' Factorina exclaims. 'The factors of 36 are 1, 2, 3, 4, 6, 9, 12, 18, and 36! Each one divides 36 perfectly.' The Number King nods approvingly, but there's more to come... ✨",
         "choices": [
-          { "text": "Accept the mission to protect your family", "next": "acceptMission" },
-          { "text": "Flee the palace and Egypt entirely", "next": "fleeEgypt" }
+          { "text": "Face the final challenge", "next": "finalChallenge" }
         ]
       },
-      "nubianTheory": {
-        "text": "Your journey south takes several weeks. As you approach the border region, you adopt the guise of a merchant seeking exotic goods. In a small trading post on the Egyptian side of the border, you meet a weathered caravan master named Amenemhat who knew the missing delegation. 'They passed through here a month ago,' he tells you over cups of beer. 'There was an argument between the lead diplomat and a Nubian merchant. Something about territories and tribute. The Nubian stormed off, promising that the matter wasn't finished.'",
+      "exploreMultiples": {
+        "text": "'The multiples never end!' Multiplo laughs as he continues: '42, 48, 54...' The Number King claps his royal hands, impressed by the endless pattern. But the real test is yet to come... 🔄",
         "choices": [
-          { "text": "Ask for more details about the argument", "next": "historyExit" },
-          { "text": "Find out about bandit activity in the region", "next": "historyExit" }
+          { "text": "Face the final challenge", "next": "finalChallenge" }
         ]
       },
-      "betrayalTheory": {
-        "text": "Before leaving Thebes, you request access to records about the missing caravan. The chief scribe of the diplomatic corps reluctantly shows you the manifest and personnel scrolls. As you study the names, one stands out—Senenmut, a junior diplomat with family ties to a noble house currently out of favor with Pharaoh. Further discreet inquiries reveal that Senenmut had recently made substantial purchases despite his modest salary, including a new villa along the Nile.",
+      "finalChallenge": {
+        "text": "The Number King announces the ultimate challenge: 'Find the common friends of 24 and 36, and their first common home in the Land of Multiples!' Factorina and Multiplo look at each other - this will take both their skills! 👥",
         "choices": [
-          { "text": "Investigate Senenmut's connections", "next": "historyExit" },
-          { "text": "Continue south but watch for signs of Senenmut's involvement", "next": "historyExit" }
+          { "text": "Work together on the puzzle", "next": "solveChallenge" }
         ]
       },
-      "fleeEgypt": {
-        "text": "In the dead of night, you gather what few possessions you can carry and slip away from your home. By dawn, you're on a fishing boat heading north on the Nile. Your plan is to reach the coast and find passage on a trading vessel to Crete or beyond. But as the sun rises, you spot royal guards checking vessels at the next town. Your future is uncertain, your family's fate sealed by your decision. Is freedom worth such a price? THE END.",
+      "solveChallenge": {
+        "text": "Together, you discover that 24 and 36 share common factors: 1, 2, 3, 4, 6, and 12! Then, by listing multiples, you find their first common multiple is 72. The Number King is delighted with your teamwork! 🌟",
         "choices": [
-          { "text": "Start a new adventure", "next": "start" }
+          { "text": "Accept a new mission", "next": "newMission" }
+        ]
+      },
+      "newMission": {
+        "text": "Just then, a royal guard rushes in with news: 'Number 60 needs help too!' Factorina giggles and Multiplo grins - another adventure awaits! As newly appointed Number Knights, you're ready to help numbers across the kingdom. 🏰",
+        "choices": [
+          { "text": "Begin the next quest", "next": "historyExit" }
         ]
       },
       "historyExit": {
-        "text": "As you prepare for the journey ahead, you realize that this mission will test not just your skills as a scribe and investigator, but your courage and judgment as well. The fate of relations between Egypt and Nubia may rest on your shoulders. May the gods grant you wisdom. THE END.",
-        "choices": [
-          { "text": "Start a new adventure", "next": "start" }
-        ]
-      }
-    },
-    "medieval-knights": {
-      "start": {
-        "text": "The tournament field bustles with activity—colorful pavilions, fluttering banners, nobles in their finery, and commoners eager for spectacle. As a newly knighted member of the royal guard, you've been granted permission to participate in the contests. Your performance could determine your future at court. King Henry himself watches from the royal box, alongside visiting dignitaries from France. Your squire hands you your helmet as the herald calls your name.",
-        "choices": [
-          { "text": "Enter the joust competition", "next": "knightExit" },
-          { "text": "Participate in the melee contest", "next": "knightExit" }
-        ]
-      },
-      "knightExit": {
-        "text": "Your journey as a knight has only begun. Whether you seek glory in tournaments, honor on the battlefield, or intrigue in the royal court, your path to becoming a legend is filled with both peril and promise. THE END.",
-        "choices": [
-          { "text": "Start a new adventure", "next": "start" }
-        ]
-      }
-    },
-    "wild-west": {
-      "start": {
-        "text": "The stagecoach drops you at the dusty main street of Redemption Creek, a frontier town that's grown rapidly since the discovery of silver in the nearby mountains. With your past behind you and your savings sewn into your coat lining, you're looking to start fresh. The saloon seems to be the center of activity, while the sheriff's office displays a board of wanted posters. A distinguished gentleman in a suit notices your arrival with interest.",
-        "choices": [
-          { "text": "Head to the saloon for information", "next": "westExit" },
-          { "text": "Visit the sheriff's office first", "next": "westExit" }
-        ]
-      },
-      "westExit": {
-        "text": "Life in the American frontier offers both opportunity and danger in equal measure. Whether you seek fortune, redemption, or a new identity, Redemption Creek will test your resolve and character. Your Wild West journey continues... THE END.",
+        "text": "Congratulations! You've learned that factors are the smaller numbers that divide perfectly, multiples are the bigger numbers that grow endlessly, and working together helps solve the trickiest number puzzles. As Number Knights, you'll continue spreading mathematical wisdom throughout the kingdom! THE END. 👑",
         "choices": [
           { "text": "Start a new adventure", "next": "start" }
         ]
@@ -505,14 +631,12 @@ function getStoryTitle(subjectId, storyId) {
       "time-traveler": "The Time Traveler"
     },
     "mystery": {
-      "haunted-mansion": "The Haunted Mansion",
-      "missing-artifact": "The Missing Artifact",
-      "detective-case": "The Detective's Case"
+      "grid-adventure": "The Great Grid Adventure",
+      "balance-of-life": "The Balance of Life",
+      "timekeepers-journal": "The Timekeeper's Journal"
     },
     "historical": {
-      "ancient-egypt": "Ancient Egyptian Adventure",
-      "medieval-knights": "Medieval Knights",
-      "wild-west": "Wild West Journey"
+      "kingdom-of-numbers": "The Kingdom of Numbers"
     }
   };
   
@@ -532,14 +656,12 @@ function getStoryDescription(subjectId, storyId) {
       "wizard-tower": "Scale a mysterious tower filled with magical challenges."
     },
     "mystery": {
-      "haunted-mansion": "Investigate strange occurrences in an old mansion with a dark history.",
-      "missing-artifact": "Track down a priceless artifact stolen from a museum under mysterious circumstances.",
-      "detective-case": "Solve a perplexing murder case with unexpected twists and turns."
+      "grid-adventure": "Join Maya and her friends on an exciting treasure hunt using grid coordinates on Map Island.",
+      "balance-of-life": "Learn about economic and non-economic activities through the lives of villagers in Sundarpur.",
+      "timekeepers-journal": "Join Tara on a magical journey to learn about chronology and the importance of keeping records."
     },
     "historical": {
-      "ancient-egypt": "Experience life and intrigue in the time of the Pharaohs.",
-      "medieval-knights": "Live the life of a knight in a time of chivalry and conflict.",
-      "wild-west": "Survive and thrive in the American frontier of the 1800s."
+      "kingdom-of-numbers": "Join Factorina and Multiplo on a magical quest to discover factors and multiples in the Kingdom of Numbers."
     }
   };
   
