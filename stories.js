@@ -13,7 +13,7 @@ const STORIES = {
         ]
       },
       "exploreKitchen": {
-        "text": "In the bright, sunny kitchen, there are many objects made of different materials. Which one catches your attention? ✨",
+        "text": "[Sunbeams stream through lace curtains, casting intricate patterns on the kitchen tiles. The air is rich with the scent of fresh bread and aromatic spices. Everything gleams with purpose, from the polished countertops to the neatly arranged utensils that catch and reflect the light.]\n\nIn the bright, sunny kitchen, there are many objects made of different materials. Which one catches your attention? ✨\n\n[A playful breeze ruffles the curtains, making the morning light dance across the various surfaces - metal glints, glass sparkles, and plastic containers glow with subtle colors.]",
         "choices": [
           { "text": "Examine the steel spoons", "next": "metalObjects" },
           { "text": "Look at glass tumblers", "next": "glassObjects" },
@@ -175,7 +175,7 @@ const STORIES = {
     },
     "curious-magnet": {
       "start": {
-        "text": "You are visiting your grandfather's workshop on a sunny afternoon. As you look around, you notice something interesting - a small iron nail is sticking to a shiny bar. Curious about this phenomenon, what would you like to do?",
+        "text": "[Warm afternoon light filters through dust-speckled windows, casting long shadows across your grandfather's workshop. The air is thick with the comforting smell of wood shavings and metal. Tools hang in neat rows on the walls, their well-worn handles telling stories of countless projects.]\n\nYou are visiting your grandfather's workshop on a sunny afternoon. As you look around, you notice something interesting - a small iron nail is sticking to a shiny bar. Curious about this phenomenon, what would you like to do?\n\n[Motes of dust dance in the sunbeams, and somewhere in the workshop, the gentle ticking of an old clock marks time. The mysterious bar seems to pulse with an invisible energy that makes nearby metal objects quiver ever so slightly.]",
         "choices": [
           { "text": "Ask grandfather about the magnetic bar", "next": "askGrandfather" },
           { "text": "Explore and test other objects", "next": "exploreObjects" }
@@ -211,7 +211,7 @@ const STORIES = {
     },
     "green-friends": {
       "start": {
-        "text": "You're sitting in a beautiful park on a sunny day, relaxing under a big mango tree 🌳. A colorful butterfly flutters nearby, catching your attention. Your teacher spots you and walks over with a smile. What would you like to do?",
+        "text": "[The park is alive with nature's symphony. Leaves rustle overhead in the gentle breeze, creating a dappled pattern of sunlight and shadow on the grass below. The air is sweet with the scent of flowers and sun-warmed earth. Birds call to each other from the treetops, their songs weaving through the peaceful afternoon.]\n\nYou're sitting in a beautiful park on a sunny day, relaxing under a big mango tree 🌳. A colorful butterfly flutters nearby, catching your attention. Your teacher spots you and walks over with a smile. What would you like to do?\n\n[The grass beneath you is cool and soft, dotted with tiny wildflowers. The butterfly's wings flash like stained glass in the sunlight, and the mango tree's leaves whisper ancient secrets above you.]",
         "choices": [
           { "text": "Ask about the butterfly", "next": "learnAboutButterfly" },
           { "text": "Ask about the mango tree", "next": "learnAboutTree" }
@@ -709,7 +709,7 @@ const STORIES = {
     },
     "punctuation-party": {
       "start": {
-        "text": "Welcome to the enchanted land of Grammar, where words live in houses made of crystal prisms that shower rainbows across flower-lined streets! Each house sparkles with its own magical glow—some pulse with sapphire light, others shimmer with emerald and ruby hues. But something isn't quite right—the sentences are as tangled as a garden of confused butterflies. Suddenly, a royal announcement echoes through the streets, carried by glowing paper airplanes that leave trails of golden sparkles: \"Tonight, we shall hold the Punctuation Party! Everyone must attend.\" What would you like to do? ✨🌟",
+        "text": "[The world dissolves into pure magic around you. The air itself seems to be made of finely ground starlight, and every breath fills you with tingling energy. The sky above shifts colors like an aurora, painting everything below in ever-changing pastels.]\n\nWelcome to the enchanted land of Grammar, where words live in houses made of crystal prisms that shower rainbows across flower-lined streets! Each house sparkles with its own magical glow—some pulse with sapphire light, others shimmer with emerald and ruby hues. But something isn't quite right—the sentences are as tangled as a garden of confused butterflies. Suddenly, a royal announcement echoes through the streets, carried by glowing paper airplanes that leave trails of golden sparkles: \"Tonight, we shall hold the Punctuation Party! Everyone must attend.\" What would you like to do? ✨🌟\n\n[Crystal wind chimes sing melodies of pure light, and the streets beneath your feet pulse with grammar magic, sending ripples of luminescence with each step. The very air seems to hold its breath in anticipation of the grand celebration.]",
         "choices": [
           { "text": "Head to the palace", "next": "enterPalace" },
           { "text": "Watch the punctuation marks arrive", "next": "watchArrivals" }
@@ -854,7 +854,7 @@ const STORIES = {
     },
     "tense-machine": {
       "start": {
-        "text": "Meet Arjun, an adventurous boy who loves science, his eyes sparkling like stars discovering new galaxies. In his magical workshop, where rainbow-colored light dances through crystal wind chimes and bounces off walls covered in shimmering diagrams, he's about to unveil his proudest invention. It's a magnificent machine that seems to capture starlight itself—a box of polished silver that glows like moonlight, with buttons that pulse with enchanted colors: one red like a sunset, one green like spring leaves, and one blue like ocean waves. He calls it the Tense Machine. His cat, Meenu, a fluffy orange cloud with golden eyes that shine like tiny suns, sits beside him on a cushion embroidered with swirling time spirals. What would you like to do? 🌟",
+        "text": "[You enter a workshop unlike any other. The air shimmers with possibilities, alive with the gentle chiming of crystal bells that hang from the ceiling. Each surface holds wonders: bottles of liquid rainbows, clockwork butterflies that actually fly, and notebooks whose pages turn themselves. Time feels different here - more fluid, more magical.]\n\nMeet Arjun, an adventurous boy who loves science, his eyes sparkling like stars discovering new galaxies. In his magical workshop, where rainbow-colored light dances through crystal wind chimes and bounces off walls covered in shimmering diagrams, he's about to unveil his proudest invention. It's a magnificent machine that seems to capture starlight itself—a box of polished silver that glows like moonlight, with buttons that pulse with enchanted colors: one red like a sunset, one green like spring leaves, and one blue like ocean waves. He calls it the Tense Machine. His cat, Meenu, a fluffy orange cloud with golden eyes that shine like tiny suns, sits beside him on a cushion embroidered with swirling time spirals. What would you like to do? 🌟\n\n[The workshop hums with an energy that makes your skin tingle. Tiny gears click and whir in the corners, and occasionally a spark of temporal energy arcs between the machine's components, leaving a trail of glowing time-echoes in the air.]",
         "choices": [
           { "text": "Examine the machine's buttons", "next": "examineButtons" },
           { "text": "Ask about the invention", "next": "askInvention" }
@@ -989,7 +989,7 @@ const STORIES = {
   mystery: {
     "british-rule": {
       "start": {
-        "text": "Welcome to the time-traveling archives! You've been chosen to explore the fascinating history of India, once known as the 'Golden Bird' 🌏. Before you are three mystical scrolls, each holding different parts of this important story. Which scroll would you like to read first?",
+        "text": "[You find yourself in an ancient library that seems to exist outside of time itself. Towering shelves of weathered wood stretch up into shadows, and the air is rich with the scent of old parchment and sandalwood. Floating orbs of soft golden light illuminate centuries of knowledge stored in countless scrolls and tomes.]\n\nWelcome to the time-traveling archives! You've been chosen to explore the fascinating history of India, once known as the 'Golden Bird' 🌏. Before you are three mystical scrolls, each holding different parts of this important story. Which scroll would you like to read first?\n\n[The scrolls seem to pulse with their own inner light, and as you approach them, you hear the whispers of history - the chanting of ancient prayers, the bustle of medieval markets, and the stirring speeches of freedom fighters. The very air around you tingles with the weight of untold stories.]",
         "choices": [
           { "text": "The Golden Bird and Early Trade", "next": "goldenBird" },
           { "text": "The Rise of Company Rule", "next": "companyRule" },
@@ -1068,7 +1068,7 @@ const STORIES = {
     },
     "grid-adventure": {
       "start": {
-        "text": "The sea sparkles as you join Maya and her friends—Sam, Aisha, and Leo—stepping onto the golden sands of Map Island 🏝️. Maya holds a mysterious map filled with squares marked with letters and numbers. 'Look!' Maya exclaims, 'It's a grid map! The first clue says: D4.' What would you like to do?",
+        "text": "[The world around you is a paradise of sensations. Gentle waves lap at the shore with a rhythmic shushing sound, and seabirds wheel overhead, their calls carried on the salt-scented breeze. Palm trees sway gently, their leaves creating shifting patterns of shade on the warm sand.]\n\nThe sea sparkles as you join Maya and her friends—Sam, Aisha, and Leo—stepping onto the golden sands of Map Island 🏝️. Maya holds a mysterious map filled with squares marked with letters and numbers. 'Look!' Maya exclaims, 'It's a grid map! The first clue says: D4.' What would you like to do?\n\n[The tropical sun bathes everything in golden light, making the ocean glitter like scattered diamonds. A sense of adventure hangs in the air, as tangible as the warm breeze that carries the sweet scent of tropical flowers from somewhere inland.]",
         "choices": [
           { "text": "Study the grid map", "next": "exploreMap" },
           { "text": "Search the beach", "next": "searchBeach" }
@@ -1125,7 +1125,7 @@ const STORIES = {
     },
     "balance-of-life": {
       "start": {
-        "text": "Welcome to the peaceful village of Sundarpur! 🌅 Here, you'll meet Aman, a hardworking farmer, and his best friend Ravi, a caring young man. They often meet at the riverbank after their daily tasks. Who would you like to follow first?",
+        "text": "[The village of Sundarpur unfolds before you like a living painting. The morning sun paints the sky in soft pinks and golds, while wisps of cooking smoke rise from clay chimneys into the crisp morning air. The sound of temple bells mingles with birdsong, and the scent of jasmine flowers drifts on the breeze.]\n\nWelcome to the peaceful village of Sundarpur! 🌅 Here, you'll meet Aman, a hardworking farmer, and his best friend Ravi, a caring young man. They often meet at the riverbank after their daily tasks. Who would you like to follow first?\n\n[The river flows nearby, its gentle murmur a constant companion to village life. Fields of green stretch to the horizon, their crops swaying like waves in the morning breeze. The whole scene breathes with the rhythm of rural life - unhurried, peaceful, and full of purpose.]",
         "choices": [
           { "text": "Follow Aman's day", "next": "amanDay" },
           { "text": "Follow Ravi's day", "next": "raviDay" }
