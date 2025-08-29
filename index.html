@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Howling Hounds - Interactive Story App</title>
+  <!-- Include the stories file first so it's available to the main script -->
+  <script src="stories.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #333;
+    }
+    
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    #app {
+      width: 90%;
+      max-width: 700px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      padding: 30px;
+      text-align: center;
+      transition: all 0.5s ease;
+      animation: fadeIn 1s ease-out;
+      margin: 20px auto;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    h2 {
+      color: #1a2a6c;
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+    
+    #storyText, #storyTextContainer {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      text-align: left;
+      padding: 10px 15px;
+      animation: textFade 0.5s ease-in;
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      min-height: 120px;
+      transition: opacity 0.3s ease;
+    }
+    
+    @keyframes textFade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    #choices {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    .choice-btn, .subject-btn, .story-btn, .back-btn {
+      display: block;
+      margin: 5px auto;
+      padding: 12px 20px;
+      width: 80%;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(to right, #4CAF50, #45a049);
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .choice-btn:hover, .subject-btn:hover, .story-btn:hover, .back-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      background: linear-gradient(to right, #45a049, #388e3c);
+    }
+    
+    .choice-btn:active, .subject-btn:active, .story-btn:active, .back-btn:active {
+      transform: translateY(1px);
+    }
+    
+    .choice-btn::after, .subject-btn::after, .story-btn::after, .back-btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.1);
+      transform: translateX(-100%);
+      transition: transform 0.3s;
+    }
+    
+    .choice-btn:hover::after, .subject-btn:hover::after, .story-btn:hover::after, .back-btn:hover::after {
+      transform: translateX(0);
+    }
+    
+    .back-btn {
+      background: linear-gradient(to right, #3498db, #2980b9);
+      margin-top: 20px;
+      width: 50%;
+    }
+    
+    .back-btn:hover {
+      background: linear-gradient(to right, #2980b9, #1c6ea4);
+    }
+    
+    #subjectSelect, #storySelect, #storyContainer {
+      display: none;
+      animation: fadeIn 0.5s ease-out;
+    }
+    
+    .subject-btn {
+      background: linear-gradient(to right, #9b59b6, #8e44ad);
+    }
+    
+    .subject-btn:hover {
+      background: linear-gradient(to right, #8e44ad, #6c3483);
+    }
+    
+    .story-btn {
+      background: linear-gradient(to right, #f39c12, #d35400);
+    }
+    
+    .story-btn:hover {
+      background: linear-gradient(to right, #d35400, #a04000);
+    }
+    
+    @media (max-width: 768px) {
+      #app {
+        width: 95%;
+        padding: 20px;
+      }
+      
+      .choice-btn, .subject-btn, .story-btn, .back-btn {
+        width: 90%;
+      }
+      
+      .back-btn {
+        width: 60%;
+      }
+    }
+    
+    .loading {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border: 5px solid rgba(255,255,255,.3);
+      border-radius: 50%;
+      border-top-color: #4CAF50;
+      animation: spin 1s ease-in-out infinite;
+      margin: 20px auto;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <h2>🌟 Interactive Story App</h2>
+    
+    <!-- Welcome Screen -->
+    <div id="welcomeScreen">
+      <div id="storyText">Welcome to the Interactive Story App! Explore different story subjects and embark on exciting adventures where your choices matter.</div>
+      <button id="startBtn" class="subject-btn">Browse Story Subjects</button>
+    </div>
+    
+    <!-- Subject Selection Screen -->
+    <div id="subjectSelect">
+      <h3>Choose a Subject</h3>
+      <div id="subjectList"></div>
+      <div class="loading" id="subjectLoading"></div>
+    </div>
+    
+    <!-- Story Selection Screen -->
+    <div id="storySelect">
+      <h3 id="currentSubject">Stories</h3>
+      <div id="storyList"></div>
+      <div class="loading" id="storyLoading"></div>
+      <button class="back-btn" id="backToSubjects">Back to Subjects</button>
+    </div>
+    
+    <!-- Story Container -->
+    <div id="storyContainer">
+      <h3 id="currentStoryTitle">Story</h3>
+      <div id="storyTextContainer" style="min-height: 150px; margin-bottom: 20px;"></div>
+      <div id="choices"></div>
+      <button class="back-btn" id="backToStories">Back to Stories</button>
+    </div>
+  </div>
+
+  <script>
+    // DOM elements
+    const welcomeScreen = document.getElementById('welcomeScreen');
+    const subjectSelect = document.getElementById('subjectSelect');
+    const storySelect = document.getElementById('storySelect');
+    const storyContainer = document.getElementById('storyContainer');
+    const subjectList = document.getElementById('subjectList');
+    const storyList = document.getElementById('storyList');
+    const currentSubject = document.getElementById('currentSubject');
+    const currentStoryTitle = document.getElementById('currentStoryTitle');
+    const storyText = document.getElementById('storyText');
+    const choicesDiv = document.getElementById('choices');
+    const startBtn = document.getElementById('startBtn');
+    const backToSubjects = document.getElementById('backToSubjects');
+    const backToStories = document.getElementById('backToStories');
+    const subjectLoading = document.getElementById('subjectLoading');
+    const storyLoading = document.getElementById('storyLoading');
+    
+    
+    // Current story data
+    let currentStoryData = null;
+    
+    // Get the story text container
+    const storyTextContainer = document.getElementById('storyTextContainer');
+    
+    // Event Listeners
+    startBtn.addEventListener('click', showSubjects);
+    backToSubjects.addEventListener('click', showSubjects);
+    backToStories.addEventListener('click', () => {
+      storyContainer.style.display = 'none';
+      storySelect.style.display = 'block';
+    });
+    
+    // Show the subject selection screen
+    async function showSubjects() {
+      welcomeScreen.style.display = 'none';
+      storySelect.style.display = 'none';
+      storyContainer.style.display = 'none';
+      subjectSelect.style.display = 'block';
+      
+      subjectList.innerHTML = '';
+      subjectLoading.style.display = 'block';
+      
+      try {
+        // Get subjects from the external stories.js file
+        const subjects = STORY_CATALOG.subjects;
+        
+        setTimeout(() => {
+          subjectLoading.style.display = 'none';
+          
+          subjects.forEach(subject => {
+            const btn = document.createElement('button');
+            btn.className = 'subject-btn';
+            btn.textContent = subject.name;
+            btn.addEventListener('click', () => showStories(subject.id, subject.name));
+            subjectList.appendChild(btn);
+          });
+        }, 300); // Small timeout to show loading effect
+      } catch (error) {
+        console.error('Error loading subjects:', error);
+        subjectLoading.style.display = 'none';
+        subjectList.innerHTML = '<p>Error loading subjects. Please try again.</p>';
+      }
+    }
+    
+    // Show the story selection screen for a specific subject
+    async function showStories(subjectId, subjectName) {
+      subjectSelect.style.display = 'none';
+      storyContainer.style.display = 'none';
+      storySelect.style.display = 'block';
+      
+      currentSubject.textContent = subjectName + ' Stories';
+      storyList.innerHTML = '';
+      storyLoading.style.display = 'block';
+      
+      try {
+        // Get stories for this subject from our stories.js file
+        const stories = STORY_CATALOG.getStoriesForSubject(subjectId);
+        
+        setTimeout(() => {
+          storyLoading.style.display = 'none';
+          
+          stories.forEach(story => {
+            const btn = document.createElement('button');
+            btn.className = 'story-btn';
+            btn.textContent = story.title;
+            btn.addEventListener('click', () => loadStory(subjectId, story.id, story.title));
+            storyList.appendChild(btn);
+          });
+        }, 300); // Small timeout to show loading effect
+      } catch (error) {
+        console.error('Error loading stories:', error);
+        storyLoading.style.display = 'none';
+        storyList.innerHTML = '<p>Error loading stories. Please try again.</p>';
+      }
+    }
+    
+    // Load and display a specific story
+    async function loadStory(subjectId, storyId, storyTitle) {
+      storySelect.style.display = 'none';
+      storyContainer.style.display = 'block';
+      
+      currentStoryTitle.textContent = storyTitle;
+      
+      // Clear existing story content and show loading indicator
+      storyTextContainer.innerHTML = '<div class="loading"></div>';
+      choicesDiv.innerHTML = '';
+      
+      try {
+        // Get story data from the external stories.js file
+        let storyData;
+        
+        // Check if the story exists in our STORIES object
+        if (STORIES[subjectId] && STORIES[subjectId][storyId]) {
+          storyData = STORIES[subjectId][storyId];
+        } else {
+          storyData = getStory(subjectId, storyId);
+        }
+        
+        console.log('Loading story:', subjectId, storyId);
+        console.log('Story data:', storyData);
+        
+        setTimeout(() => {
+          currentStoryData = storyData;
+          console.log("About to show start node with data:", storyData);
+          console.log("Using story container:", storyTextContainer);
+          showNode("start");
+        }, 500);
+        
+      } catch (error) {
+        console.error('Error loading story:', error);
+        storyTextContainer.innerHTML = '<p>Error loading story. Please try again.</p>';
+      }
+    }
+
+    // Display a specific node in the current story
+    function showNode(nodeName) {
+      if (nodeName === "exit_action") {
+        storyContainer.style.display = 'none';
+        storySelect.style.display = 'block';
+        return;
+      }
+      
+      const node = currentStoryData[nodeName];
+      if (!node) {
+        console.error(`Story node "${nodeName}" not found in the current story!`);
+        storyTextContainer.innerHTML = `<p>Error: Could not find the next part of the story.</p>`;
+        return;
+      }
+      
+      // Fade out effect
+      storyTextContainer.style.opacity = 0;
+      choicesDiv.style.opacity = 0;
+      
+      // Wait for fade out before updating content
+      setTimeout(() => {
+        // Update content
+        storyTextContainer.innerHTML = formatStoryText(node.text);
+        choicesDiv.innerHTML = "";
+
+        // Create choice buttons
+        node.choices.forEach(choice => {
+          const btn = document.createElement("button");
+          btn.textContent = choice.text;
+          btn.className = "choice-btn";
+          btn.onclick = () => showNode(choice.next);
+          choicesDiv.appendChild(btn);
+        }); 
+        
+        // Fade in effect
+        storyTextContainer.style.opacity = 1;
+        choicesDiv.style.opacity = 1;
+      }, 300);
+    }
+    
+    // Format story text to handle emojis and emphasis
+    function formatStoryText(text) {
+      // Emphasize important phrases in italics
+      text = text.replace(/'([^']+)'/g, '<em>$1</em>');
+      
+      // Make the text more readable with paragraphs
+      text = text.replace(/\n/g, '<br>');
+      
+      return text ;
+    }
+
+    // Verify story data is loaded properly
+    function verifyStoryData() {
+      // Check if STORIES object is available
+      if (typeof STORIES === 'undefined') {
+        console.error('STORIES object is not defined! Check that stories.js is loaded correctly.');
+        return false;
+      }
+      
+      // Check if we have subjects
+      const subjectKeys = Object.keys(STORIES);
+      console.log(`Loaded ${subjectKeys.length} story subjects:`, subjectKeys);
+      
+      // Check at least one story per subject
+      let totalStories = 0;
+      subjectKeys.forEach(subject => {
+        const storiesInSubject = Object.keys(STORIES[subject]).length;
+        console.log(`- ${subject}: ${storiesInSubject} stories`);
+        totalStories += storiesInSubject;
+      });
+      
+      console.log(`Total stories available: ${totalStories}`);
+      return true;
+    }
+    
+    // Initialize the app
+    document.addEventListener('DOMContentLoaded', () => {
+      // Check if stories loaded correctly
+      const storiesLoaded = verifyStoryData();
+      if (!storiesLoaded) {
+        alert('Error: Story data could not be loaded. Please check the console for details.');
+      }
+      
+      // Set up initial visibility
+      welcomeScreen.style.display = 'block';
+      subjectSelect.style.display = 'none';
+      storySelect.style.display = 'none';
+      storyContainer.style.display = 'none';
+      subjectLoading.style.display = 'none';
+      storyLoading.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
