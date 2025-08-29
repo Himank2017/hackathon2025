@@ -114,7 +114,60 @@ const STORIES = {
         ]
       },
       "materialsEnd": {
-        "text": "Back at school, the teacher smiles proudly. \"You've discovered something important today! Everything around us is made of different materials—each with its own special properties. Metal is strong, glass is transparent, wood is durable, cotton is soft, and so much more! Understanding materials helps us use them wisely and appreciate the world around us.\" The three friends beam with pride, knowing they're now material experts! THE END. 🌟",
+        "text": "Back at school, the teacher smiles proudly. \"You've discovered something important today! Everything around us is made of different materials—each with its own special properties. Metal is strong, glass is transparent, wood is durable, cotton is soft, and so much more! Understanding materials helps us use them wisely and appreciate the world around us.\" Would you like to test your knowledge of materials? 🌟",
+        "choices": [
+          { "text": "Take the quiz", "next": "materialsQuiz1" },
+          { "text": "Start a new adventure", "next": "start" }
+        ]
+      },
+      "materialsQuiz1": {
+        "text": "Question 1: Which material is transparent and lets you see through it? 🔍",
+        "choices": [
+          { "text": "Wood", "next": "materialsQuiz2Wrong" },
+          { "text": "Glass", "next": "materialsQuiz2Correct" },
+          { "text": "Metal", "next": "materialsQuiz2Wrong" }
+        ]
+      },
+      "materialsQuiz2Correct": {
+        "text": "Correct! Glass is transparent and lets light pass through. Question 2: Which material is soft and comes from plants? 🌱",
+        "choices": [
+          { "text": "Cotton", "next": "materialsQuiz3Correct" },
+          { "text": "Metal", "next": "materialsQuiz3Wrong" },
+          { "text": "Stone", "next": "materialsQuiz3Wrong" }
+        ]
+      },
+      "materialsQuiz2Wrong": {
+        "text": "Not quite! Remember, glass is transparent - that's why we use it for windows! Let's try Question 2: Which material is soft and comes from plants? 🌱",
+        "choices": [
+          { "text": "Cotton", "next": "materialsQuiz3Correct" },
+          { "text": "Metal", "next": "materialsQuiz3Wrong" },
+          { "text": "Stone", "next": "materialsQuiz3Wrong" }
+        ]
+      },
+      "materialsQuiz3Correct": {
+        "text": "Excellent! Cotton comes from cotton plants. Final Question: Which property best describes metal? ⚡",
+        "choices": [
+          { "text": "Soft and fluffy", "next": "materialsQuizEndWrong" },
+          { "text": "Strong and shiny", "next": "materialsQuizEndCorrect" },
+          { "text": "Light and transparent", "next": "materialsQuizEndWrong" }
+        ]
+      },
+      "materialsQuiz3Wrong": {
+        "text": "Remember: Cotton is a natural fiber from plants! Final Question: Which property best describes metal? ⚡",
+        "choices": [
+          { "text": "Soft and fluffy", "next": "materialsQuizEndWrong" },
+          { "text": "Strong and shiny", "next": "materialsQuizEndCorrect" },
+          { "text": "Light and transparent", "next": "materialsQuizEndWrong" }
+        ]
+      },
+      "materialsQuizEndCorrect": {
+        "text": "Congratulations! You're a Materials Master! You understand the different properties of materials like glass, cotton, and metal. This knowledge will help you understand and use materials wisely! �",
+        "choices": [
+          { "text": "Start a new adventure", "next": "start" }
+        ]
+      },
+      "materialsQuizEndWrong": {
+        "text": "Remember: Metal is strong and shiny - that's why we use it for tools and utensils! Keep exploring materials around you - you're learning more every day! 📚",
         "choices": [
           { "text": "Start a new adventure", "next": "start" }
         ]
@@ -348,7 +401,57 @@ const STORIES = {
         ]
       },
       "storyEnd": {
-        "text": "Riya learned that numbers are wonderful tools that help us in daily life. Addition lets us combine things together, while subtraction helps us share and find what remains. From that day on, Riya saw math everywhere in her adventures - from counting stars to sharing sweets with friends. THE END. ✨",
+        "text": "Riya learned that numbers are wonderful tools that help us in daily life. Addition lets us combine things together, while subtraction helps us share and find what remains. From that day on, Riya saw math everywhere in her adventures - from counting stars to sharing sweets with friends. Would you like to test what you learned? ✨",
+        "choices": [
+          { "text": "Take the quiz", "next": "quiz1" },
+          { "text": "Start a new adventure", "next": "start" }
+        ]
+      },
+      "quiz1": {
+        "text": "Question 1: If you have 4 candies and your friend gives you 3 more, which operation would you use to find the total? 🍬",
+        "choices": [
+          { "text": "Addition (+)", "next": "quiz2Correct" },
+          { "text": "Subtraction (-)", "next": "quiz2Wrong" }
+        ]
+      },
+      "quiz2Correct": {
+        "text": "Correct! Addition helps us find the total when we combine things. Now for Question 2: If you have 7 apples and give 2 to your friend, which operation helps you find how many are left? 🍎",
+        "choices": [
+          { "text": "Addition (+)", "next": "quiz3Wrong" },
+          { "text": "Subtraction (-)", "next": "quiz3Correct" }
+        ]
+      },
+      "quiz2Wrong": {
+        "text": "Not quite! Remember, when we get more of something, we add. Let's try Question 2: If you have 7 apples and give 2 to your friend, which operation helps you find how many are left? 🍎",
+        "choices": [
+          { "text": "Addition (+)", "next": "quiz3Wrong" },
+          { "text": "Subtraction (-)", "next": "quiz3Correct" }
+        ]
+      },
+      "quiz3Correct": {
+        "text": "Excellent! Subtraction helps us find what remains. Final Question: In Riya's story, how many apples did she have after the squirrel gave her more? 🐿️",
+        "choices": [
+          { "text": "5 apples", "next": "quizEndWrong" },
+          { "text": "8 apples", "next": "quizEndCorrect" },
+          { "text": "6 apples", "next": "quizEndWrong" }
+        ]
+      },
+      "quiz3Wrong": {
+        "text": "Remember: when we give things away, we subtract! Final Question: In Riya's story, how many apples did she have after the squirrel gave her more? 🐿️",
+        "choices": [
+          { "text": "5 apples", "next": "quizEndWrong" },
+          { "text": "8 apples", "next": "quizEndCorrect" },
+          { "text": "6 apples", "next": "quizEndWrong" }
+        ]
+      },
+      "quizEndCorrect": {
+        "text": "Congratulations! You've mastered the magic of numbers! You understand how addition helps us combine things and subtraction helps us share and find what remains. You're a math wizard! 🌟",
+        "choices": [
+          { "text": "Start a new adventure", "next": "start" }
+        ]
+      },
+      "quizEndWrong": {
+        "text": "Remember: Riya had 5 apples and got 3 more from the squirrel, making 8 apples! Keep practicing your addition and subtraction - you're getting better every day! 🌟",
         "choices": [
           { "text": "Start a new adventure", "next": "start" }
         ]
@@ -390,7 +493,7 @@ const STORIES = {
         ]
       },
       "sunflowerPatch": {
-        "text": "You discover a patch of extraordinary sunflowers. How do these magical sunflowers appear to you? They look...",
+        "text": "You discover a patch of extraordinary sunflowers... How do these magical sunflowers appear to you? They look...",
         "choices": [
           { "text": "Gigantic and friendly", "next": "deeperGarden1" },
           { "text": "Sparkly and golden", "next": "deeperGarden1" },
@@ -545,7 +648,60 @@ const STORIES = {
         ]
       },
       "grammarExit": {
-        "text": "Thanks to you and the grammar friends, Grammar Town is safe again! Noun, Verb, and Adjective thank you for your help. \"Remember,\" they say, \"every good sentence needs a name (noun), an action (verb), and sometimes a description (adjective) to be complete!\" THE END. 🌟",
+        "text": "Thanks to you and the grammar friends, Grammar Town is safe again! Noun, Verb, and Adjective thank you for your help. \"Remember,\" they say, \"every good sentence needs a name (noun), an action (verb), and sometimes a description (adjective) to be complete!\" Would you like to test your grammar knowledge? 🌟",
+        "choices": [
+          { "text": "Take the quiz", "next": "grammarQuiz1" },
+          { "text": "Start a new adventure", "next": "start" }
+        ]
+      },
+      "grammarQuiz1": {
+        "text": "Question 1: In the sentence 'The happy dog runs', which word is the noun? 🐕",
+        "choices": [
+          { "text": "happy", "next": "grammarQuiz2Wrong" },
+          { "text": "dog", "next": "grammarQuiz2Correct" },
+          { "text": "runs", "next": "grammarQuiz2Wrong" }
+        ]
+      },
+      "grammarQuiz2Correct": {
+        "text": "Correct! 'Dog' is the noun - it's the name of someone or something. Question 2: In the same sentence, which word shows action? 🏃",
+        "choices": [
+          { "text": "happy", "next": "grammarQuiz3Wrong" },
+          { "text": "dog", "next": "grammarQuiz3Wrong" },
+          { "text": "runs", "next": "grammarQuiz3Correct" }
+        ]
+      },
+      "grammarQuiz2Wrong": {
+        "text": "Not quite! Remember, nouns are names of people, places, or things. Let's try Question 2: In 'The happy dog runs', which word shows action? 🏃",
+        "choices": [
+          { "text": "happy", "next": "grammarQuiz3Wrong" },
+          { "text": "dog", "next": "grammarQuiz3Wrong" },
+          { "text": "runs", "next": "grammarQuiz3Correct" }
+        ]
+      },
+      "grammarQuiz3Correct": {
+        "text": "Excellent! 'Runs' is the verb - it shows action. Final Question: Which word describes the dog? 🎨",
+        "choices": [
+          { "text": "happy", "next": "grammarQuizEndCorrect" },
+          { "text": "dog", "next": "grammarQuizEndWrong" },
+          { "text": "runs", "next": "grammarQuizEndWrong" }
+        ]
+      },
+      "grammarQuiz3Wrong": {
+        "text": "Remember: verbs show action! Final Question: In 'The happy dog runs', which word describes the dog? 🎨",
+        "choices": [
+          { "text": "happy", "next": "grammarQuizEndCorrect" },
+          { "text": "dog", "next": "grammarQuizEndWrong" },
+          { "text": "runs", "next": "grammarQuizEndWrong" }
+        ]
+      },
+      "grammarQuizEndCorrect": {
+        "text": "Congratulations! You're a Grammar Champion! You can identify nouns (naming words), verbs (action words), and adjectives (describing words). Grammar Town is proud of you! �",
+        "choices": [
+          { "text": "Start a new adventure", "next": "start" }
+        ]
+      },
+      "grammarQuizEndWrong": {
+        "text": "Remember: adjectives like 'happy' describe nouns! Keep practicing your parts of speech - you're becoming a great grammarian! 📚",
         "choices": [
           { "text": "Start a new adventure", "next": "start" }
         ]
@@ -637,7 +793,60 @@ const STORIES = {
         ]
       },
       "partyExit": {
-        "text": "Thanks to you and the punctuation marks, the sentence is now clear and proper! The Queen of Grammar smiles proudly. \"Remember,\" she says, \"punctuation marks are the true heroes of writing. They help us express ourselves clearly and beautifully!\" The party continues with perfectly punctuated joy! THE END. 🎉",
+        "text": "Thanks to you and the punctuation marks, the sentence is now clear and proper! The Queen of Grammar smiles proudly. \"Remember,\" she says, \"punctuation marks are the true heroes of writing. They help us express ourselves clearly and beautifully!\" Would you like to test your punctuation knowledge? 🎉",
+        "choices": [
+          { "text": "Take the quiz", "next": "punctuationQuiz1" },
+          { "text": "Start a new adventure", "next": "start" }
+        ]
+      },
+      "punctuationQuiz1": {
+        "text": "Question 1: Which punctuation mark do we use at the end of a question? 🤔",
+        "choices": [
+          { "text": "Period (.)", "next": "punctuationQuiz2Wrong" },
+          { "text": "Question Mark (?)", "next": "punctuationQuiz2Correct" },
+          { "text": "Exclamation Mark (!)", "next": "punctuationQuiz2Wrong" }
+        ]
+      },
+      "punctuationQuiz2Correct": {
+        "text": "Correct! We use a question mark (?) at the end of questions. Question 2: Which punctuation mark shows excitement or strong feelings?",
+        "choices": [
+          { "text": "Period (.)", "next": "punctuationQuiz3Wrong" },
+          { "text": "Question Mark (?)", "next": "punctuationQuiz3Wrong" },
+          { "text": "Exclamation Mark (!)", "next": "punctuationQuiz3Correct" }
+        ]
+      },
+      "punctuationQuiz2Wrong": {
+        "text": "Not quite! Remember, questions always end with a question mark (?). Let's try Question 2: Which punctuation mark shows excitement or strong feelings?",
+        "choices": [
+          { "text": "Period (.)", "next": "punctuationQuiz3Wrong" },
+          { "text": "Question Mark (?)", "next": "punctuationQuiz3Wrong" },
+          { "text": "Exclamation Mark (!)", "next": "punctuationQuiz3Correct" }
+        ]
+      },
+      "punctuationQuiz3Correct": {
+        "text": "Excellent! The exclamation mark (!) shows excitement. Final Question: Which punctuation marks hold the exact words someone says? 💭",
+        "choices": [
+          { "text": "Question Marks (?)", "next": "punctuationQuizEndWrong" },
+          { "text": "Quotation Marks (\"\")", "next": "punctuationQuizEndCorrect" },
+          { "text": "Periods (.)", "next": "punctuationQuizEndWrong" }
+        ]
+      },
+      "punctuationQuiz3Wrong": {
+        "text": "Remember: Exclamation marks show excitement! Final Question: Which punctuation marks hold the exact words someone says? 💭",
+        "choices": [
+          { "text": "Question Marks (?)", "next": "punctuationQuizEndWrong" },
+          { "text": "Quotation Marks (\"\")", "next": "punctuationQuizEndCorrect" },
+          { "text": "Periods (.)", "next": "punctuationQuizEndWrong" }
+        ]
+      },
+      "punctuationQuizEndCorrect": {
+        "text": "Congratulations! You're a Punctuation Expert! You know how to use question marks for questions, exclamation marks for excitement, and quotation marks for speech. Your writing will be clear and beautiful! �",
+        "choices": [
+          { "text": "Start a new adventure", "next": "start" }
+        ]
+      },
+      "punctuationQuizEndWrong": {
+        "text": "Remember: Quotation marks (\"\") hold the exact words someone says! Keep practicing your punctuation - you're getting better every day! 📝",
         "choices": [
           { "text": "Start a new adventure", "next": "start" }
         ]
@@ -712,7 +921,60 @@ const STORIES = {
         ]
       },
       "grammarExit": {
-        "text": "Thanks to Arjun's amazing Tense Machine, you've learned how language changes with time—past, present, and future. Meenu purrs contentedly as Arjun declares, 'Now we can time travel through grammar!' The machine glows softly, ready for more adventures in language. THE END. ⏰",
+        "text": "Thanks to Arjun's amazing Tense Machine, you've learned how language changes with time—past, present, and future. Meenu purrs contentedly as Arjun declares, 'Now we can time travel through grammar!' Would you like to test your knowledge of tenses? ⏰",
+        "choices": [
+          { "text": "Take the quiz", "next": "tenseQuiz1" },
+          { "text": "Start a new adventure", "next": "start" }
+        ]
+      },
+      "tenseQuiz1": {
+        "text": "Question 1: If something is happening right now, which tense should you use? ⌛",
+        "choices": [
+          { "text": "Past Tense", "next": "tenseQuiz2Wrong" },
+          { "text": "Present Tense", "next": "tenseQuiz2Correct" },
+          { "text": "Future Tense", "next": "tenseQuiz2Wrong" }
+        ]
+      },
+      "tenseQuiz2Correct": {
+        "text": "Correct! Present tense is for things happening now. Question 2: Which sentence is in the past tense? 📝",
+        "choices": [
+          { "text": "I will play tomorrow", "next": "tenseQuiz3Wrong" },
+          { "text": "I am playing now", "next": "tenseQuiz3Wrong" },
+          { "text": "I played yesterday", "next": "tenseQuiz3Correct" }
+        ]
+      },
+      "tenseQuiz2Wrong": {
+        "text": "Not quite! Remember, present tense shows what's happening now. Let's try Question 2: Which sentence is in the past tense? 📝",
+        "choices": [
+          { "text": "I will play tomorrow", "next": "tenseQuiz3Wrong" },
+          { "text": "I am playing now", "next": "tenseQuiz3Wrong" },
+          { "text": "I played yesterday", "next": "tenseQuiz3Correct" }
+        ]
+      },
+      "tenseQuiz3Correct": {
+        "text": "Excellent! Past tense tells us about things that already happened. Final Question: Which sentence shows something that will happen later? 🔮",
+        "choices": [
+          { "text": "I am reading a book", "next": "tenseQuizEndWrong" },
+          { "text": "I will read tomorrow", "next": "tenseQuizEndCorrect" },
+          { "text": "I read yesterday", "next": "tenseQuizEndWrong" }
+        ]
+      },
+      "tenseQuiz3Wrong": {
+        "text": "Remember: Past tense is for things that already happened! Final Question: Which sentence shows something that will happen later? 🔮",
+        "choices": [
+          { "text": "I am reading a book", "next": "tenseQuizEndWrong" },
+          { "text": "I will read tomorrow", "next": "tenseQuizEndCorrect" },
+          { "text": "I read yesterday", "next": "tenseQuizEndWrong" }
+        ]
+      },
+      "tenseQuizEndCorrect": {
+        "text": "Congratulations! You're a Time Travel Grammar Expert! You can identify past, present, and future tenses perfectly. Arjun and Meenu would be proud! 🌟",
+        "choices": [
+          { "text": "Start a new adventure", "next": "start" }
+        ]
+      },
+      "tenseQuizEndWrong": {
+        "text": "Remember: Future tense uses 'will' to show things that haven't happened yet! Keep practicing your tenses - you're getting better at time-traveling through grammar! ⏰",
         "choices": [
           { "text": "Start a new adventure", "next": "start" }
         ]
