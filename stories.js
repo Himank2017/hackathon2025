@@ -157,129 +157,271 @@ const STORIES = {
 
   // english subject stories
   english: {
-    "enchanted-forest": {
+    "grammar-battle": {
       "start": {
-        "text": "You wake up at the edge of an ancient, mysterious forest. The trees tower above you, their leaves rustling with secrets. Two paths stretch before you: one winding to the left through a dense grove of silver birch trees, the other to the right beside a carpet of wildflowers. Which path calls to you?",
+        "text": "Welcome to Grammar Town! Here live three best friends who protect good sentences: Noun (who gives names), Verb (who shows action), and Adjective (who adds descriptions). The town is peaceful until one day, a dark cloud appears on the horizon... What would you like to do? 🏰",
         "choices": [
-          { "text": "Take the path through the silver birch trees.. ", "next": "leftPath" },
-          { "text": "Follow the trail of wildflowerjjjs", "next": "rightPath" }
+          { "text": "Meet the grammar friends", "next": "meetFriends" },
+          { "text": "Watch the dark cloud", "next": "darkCloud" }
         ]
       },
-      "leftPath": {
-        "text": "The silver birches close around you, their white bark gleaming like bones in the dappled sunlight. After walking for what feels like hours, you enter a small clearing. In the center, perched on an ancient oak stump, sits a magnificent owl with feathers that shimmer with an otherworldly iridescence 🦉. Its eyes, deep and golden, fix upon you with unmistakable intelligence. 'Few travelers come this way,' it says, its voice resonant and wise. 'Would you care to hear a tale passed down through the centuries?'",
+      "meetFriends": {
+        "text": "The three friends gather around you. Noun stands proudly, Verb bounces with energy, and Adjective twirls gracefully. Who would you like to talk to first? 👥",
         "choices": [
-          { "text": "Yes, I would be honored to hear your story", "next": "owlStory" },
-          { "text": "I'm sorry, but I must continue my journey", "next": "keepWalking" }
+          { "text": "Chat with Noun", "next": "meetNoun" },
+          { "text": "Talk to Verb", "next": "meetVerb" },
+          { "text": "Speak with Adjective", "next": "meetAdjective" }
         ]
       },
-      "rightPath": {
-        "text": "The wildflower path leads you through meadows bursting with color—crimson poppies, azure cornflowers, and golden buttercups dancing in the gentle breeze. As you crest a small hill, you're greeted by the sight of a river that seems to capture the very essence of magic 🌊. The water flows with a gentle melody, sparkling as if thousands of tiny stars were caught in its current. A set of stepping stones provides a potentially treacherous crossing, while further downstream, the river bends around a corner, inviting exploration.",
+      "meetNoun": {
+        "text": "Noun bows gracefully. \"I give names to everything!\" they explain. \"I can be a person (teacher), a place (school), or a thing (book). Without me, you wouldn't know who or what the sentence is about!\" 📚",
         "choices": [
-          { "text": "Brave the stepping stones to cross the river", "next": "crossRiver" },
-          { "text": "Follow the river's winding path downstream", "next": "followRiver" }
+          { "text": "Meet another friend", "next": "meetFriends" },
+          { "text": "Practice with nouns", "next": "practiceNouns" }
         ]
       },
-      "owlStory": {
-        "text": "The owl's eyes glimmer as it begins: 'Long ago, when the world was young, a powerful sorcerer and a humble farmer crossed paths. The sorcerer, prideful of his magic, mocked the farmer's simple life. In response, the farmer offered the sorcerer his finest meal without resentment. Moved by this kindness, the sorcerer realized that true power lies not in spells and enchantments, but in the ability to show compassion even to those who show none in return.' The owl fixes its penetrating gaze upon you. 'Remember, traveler, kindness costs nothing but enriches both the giver and receiver.' As the owl's words sink in, you feel a profound shift in your perspective. You thank the owl and continue your journey with a lighter heart and clearer mind 🎉.",
+      "meetVerb": {
+        "text": "Verb does a backflip! \"I'm all about action!\" they exclaim while demonstrating. \"I can run, jump, swim, dance, sing, and play! I show what's happening in the sentence.\" 🏃‍♂️",
         "choices": [
-          { "text": "Thank the owl and reflect on your journey", "next": "forestExit" },
-          { "text": "Ask the owl for guidance on your path ahead", "next": "forestExit" }
+          { "text": "Meet another friend", "next": "meetFriends" },
+          { "text": "Practice with verbs", "next": "practiceVerbs" }
         ]
       },
-      "keepWalking": {
-        "text": "You politely decline the owl's offer and continue along the path. The forest grows denser, the light dimmer, until you stumble upon a small hollow beneath an ancient yew tree. There, half-buried in moss and leaves, you discover an ornate chest 📚. The lock springs open at your touch, revealing not gold or jewels, but books—dozens of them, each bound in leather and inscribed with titles in languages both familiar and strange.",
+      "meetAdjective": {
+        "text": "Adjective spins in a rainbow of colors. \"I make everything beautiful and clear!\" they say with a smile. \"I describe nouns: happy dog, tall tree, shiny star. I help paint pictures with words!\" 🌈",
         "choices": [
-          { "text": "Take a book and continue your journey", "next": "forestExit" },
-          { "text": "Leave the books untouched", "next": "forestExit" }
+          { "text": "Meet another friend", "next": "meetFriends" },
+          { "text": "Practice with adjectives", "next": "practiceAdjectives" }
         ]
       },
-      "crossRiver": {
-        "text": "You carefully hop from stone to stone, the rushing water singing beneath you. Halfway across, one stone wobbles precariously, but you manage to keep your balance with a graceful leap. Reaching the other side, you find yourself in what can only be described as an enchanted garden 🌺. Flowers of impossible colors bloom everywhere, their petals seeming to shimmer between shades as you watch.",
+      "darkCloud": {
+        "text": "The dark cloud grows larger, and suddenly... BOOM! The Sentence Monster appears! It roars and starts jumbling words in Grammar Town. The first mess it creates is: \"runs cat the fast\" The townspeople panic! 😱",
         "choices": [
-          { "text": "Explore the magical garden", "next": "forestExit" },
-          { "text": "Look for a way back", "next": "forestExit" }
+          { "text": "Help fix the sentence", "next": "fixFirstSentence" },
+          { "text": "Call the grammar friends", "next": "callFriends" }
         ]
       },
-      "followRiver": {
-        "text": "The river leads you through a landscape of increasing beauty—cascading waterfalls, tranquil pools teeming with iridescent fish, and banks lined with flowers that seem to bow in greeting as you pass. After several miles, the sound of laughter and conversation reaches your ears. Rounding a bend, you discover a village unlike any you've seen before 😊.",
+      "practiceNouns": {
+        "text": "Noun shows you some examples: \"Look around! 'Teacher' is a person-noun, 'park' is a place-noun, and 'ball' is a thing-noun. Can you spot more nouns in Grammar Town?\" 🎯",
         "choices": [
-          { "text": "Enter the village", "next": "forestExit" },
-          { "text": "Continue following the river", "next": "forestExit" }
+          { "text": "Continue exploring", "next": "darkCloud" },
+          { "text": "Meet other friends", "next": "meetFriends" }
         ]
       },
-      "forestExit": {
-        "text": "As you leave the magical forest behind, you carry with you not just memories, but transformation. The world seems more vibrant, more full of possibility than before. You know that whatever adventures await you next, you'll face them with new wisdom and courage. Perhaps one day, you'll return to the forest—but for now, other horizons call. THE END.",
+      "practiceVerbs": {
+        "text": "Verb demonstrates actions: \"Watch me! I can 'jump' (jumps), 'dance' (dances), and 'spin' (spins). Every action you see is a verb! Want to try some?\" 💫",
+        "choices": [
+          { "text": "Continue exploring", "next": "darkCloud" },
+          { "text": "Meet other friends", "next": "meetFriends" }
+        ]
+      },
+      "practiceAdjectives": {
+        "text": "Adjective points to things around: \"See that 'tall' tree? That 'happy' child? That 'bright' sun? I added all those describing words! They make everything more interesting!\" ✨",
+        "choices": [
+          { "text": "Continue exploring", "next": "darkCloud" },
+          { "text": "Meet other friends", "next": "meetFriends" }
+        ]
+      },
+      "callFriends": {
+        "text": "The three friends rush to help! Noun examines the jumbled words: \"I see 'cat'—that's me!\" Verb points: \"And 'runs' is my part!\" Adjective adds: \"'Fast' is one of mine!\" Together, they can fix this! 💪",
+        "choices": [
+          { "text": "Help fix the sentence", "next": "fixFirstSentence" }
+        ]
+      },
+      "fixFirstSentence": {
+        "text": "Working together, you and the friends rearrange the words. \"The fast cat runs.\" Perfect! Each word is in its right place: 'the cat' (noun), 'runs' (verb), 'fast' (adjective). But wait—the monster isn't done! 🔄",
+        "choices": [
+          { "text": "Face the next challenge", "next": "secondChallenge" }
+        ]
+      },
+      "secondChallenge": {
+        "text": "The monster throws another jumbled sentence: \"happy dog a plays\" The friends look at you expectantly. Can you help them fix this one too? Remember what each friend does! 🤔",
+        "choices": [
+          { "text": "Reorganize the words", "next": "fixSecondSentence" },
+          { "text": "Ask friends for help", "next": "getFriendsHelp" }
+        ]
+      },
+      "getFriendsHelp": {
+        "text": "Noun points to 'dog', Verb claims 'plays', and Adjective shows that 'happy' describes the dog. The article 'a' helps introduce our noun. Now you can put it all together! 📝",
+        "choices": [
+          { "text": "Fix the sentence", "next": "fixSecondSentence" }
+        ]
+      },
+      "fixSecondSentence": {
+        "text": "\"A happy dog plays.\" The sentence is fixed! The monster howls in defeat and begins to fade away. The townspeople cheer as Grammar Town is saved by the power of properly organized words! 🎉",
+        "choices": [
+          { "text": "Celebrate victory", "next": "grammarExit" }
+        ]
+      },
+      "grammarExit": {
+        "text": "Thanks to you and the grammar friends, Grammar Town is safe again! Noun, Verb, and Adjective thank you for your help. \"Remember,\" they say, \"every good sentence needs a name (noun), an action (verb), and sometimes a description (adjective) to be complete!\" THE END. 🌟",
         "choices": [
           { "text": "Start a new adventure", "next": "start" }
         ]
       }
     },
-    "dragon-quest": {
+    "punctuation-party": {
       "start": {
-        "text": "The village elder points to the smoking mountain in the distance. 'The dragon has awakened,' she says gravely. 'For generations it slept, but now its fire threatens our lands. We need a brave soul to journey to the mountain and find a way to calm the beast—or defeat it.' All eyes turn to you, the stranger who arrived just days ago with a sword at your side and determination in your eyes. Will you accept this perilous quest?",
+        "text": "Welcome to the magical land of Grammar, where words live in colorful houses! But something isn't quite right—the sentences are messy and confusing. Suddenly, a royal announcement echoes through the streets: \"Tonight, we shall hold the Punctuation Party! Everyone must attend.\" What would you like to do? ✨",
         "choices": [
-          { "text": "Accept the quest to confront the dragon", "next": "acceptQuest" },
-          { "text": "Ask for more information before deciding", "next": "askInfo" }
+          { "text": "Head to the palace", "next": "enterPalace" },
+          { "text": "Watch the punctuation marks arrive", "next": "watchArrivals" }
         ]
       },
-      "acceptQuest": {
-        "text": "You step forward, your decision made. The village erupts in a mixture of cheers and solemn nods. The elder approaches with a weathered map. 'There are two routes to the dragon's lair,' she explains. 'The mountain pass is faster but treacherous with narrow paths and falling rocks. The forest route is longer but might offer resources to aid your quest.' She hands you a small pendant carved from iridescent stone. 'This has been passed down through generations, waiting for this day. It may offer protection against the dragon's fire—or something more.'",
+      "enterPalace": {
+        "text": "The Grammar Palace glitters with lights, and music fills the air. Inside, you see empty spaces at the ends of sentences, waiting for their punctuation marks. The Queen of Grammar stands at her throne, watching the entrance expectantly. 👑",
         "choices": [
-          { "text": "Take the mountain pass", "next": "mountainRoute" },
-          { "text": "Choose the forest route", "next": "forestRoute" }
+          { "text": "Greet the Queen", "next": "meetQueen" },
+          { "text": "Watch the guests arrive", "next": "watchArrivals" }
         ]
       },
-      "askInfo": {
-        "text": "'What do we know of this dragon?' you ask, sensibly wanting to be prepared. The elder gestures to an ancient tome brought forward by her apprentice. 'The texts speak of a creature not of pure malice, but of ancient intelligence. Our ancestors made a pact with it long ago—a pact now forgotten. The dragon's awakening may be a response to some violation of that agreement.' She looks troubled. 'If you choose to go, you might seek either to remind the dragon of this pact or to find its weakness. Both paths are dangerous.'",
+      "meetQueen": {
+        "text": "The Queen smiles warmly. \"Welcome to our Punctuation Party! We must help our sentences look neat and clear. Each punctuation mark has a special job to do. Would you like to meet them?\" 👑",
         "choices": [
-          { "text": "Accept the quest to investigate the pact", "next": "acceptQuest" },
-          { "text": "Decline the quest - this is beyond your skills", "next": "declineQuest" }
+          { "text": "Meet the punctuation marks", "next": "watchArrivals" },
+          { "text": "Ask about their jobs", "next": "learnPunctuation" }
         ]
       },
-      "declineQuest": {
-        "text": "You regretfully explain that dragon-slaying is beyond your capabilities. While disappointed, the villagers understand. As you prepare to leave the next morning, a young girl approaches with a flower. 'For your journey,' she says. 'May it bring you courage when you need it most.' Something in her eyes makes you reconsider your decision...",
+      "watchArrivals": {
+        "text": "The punctuation marks begin to arrive! First comes the Full Stop (.), walking calmly and wisely. Then the energetic Question Mark (?) hops in, followed by the excited Exclamation Mark (!). Finally, the Quotation Marks arrive together. Who would you like to meet first?",
         "choices": [
-          { "text": "Change your mind and accept the quest", "next": "acceptQuest" },
-          { "text": "Thank her and continue on your way", "next": "departVillage" }
+          { "text": "Talk to Full Stop", "next": "meetFullStop" },
+          { "text": "Chat with Question Mark", "next": "meetQuestion" },
+          { "text": "Greet Exclamation Mark", "next": "meetExclamation" },
+          { "text": "Meet Quotation Marks", "next": "meetQuotations" }
         ]
       },
-      "departVillage": {
-        "text": "You leave the village behind, the smoking mountain receding in the distance as you follow the road onward. Yet something nags at your conscience—a sense of destiny avoided, of a crucial moment passed by. Perhaps one day you'll return, or perhaps the village's fate is now sealed. Only time will tell if your choice was wisdom or regret. THE END.",
+      "meetFullStop": {
+        "text": "The Full Stop (.) bows politely. \"I end sentences,\" he explains calmly. \"Without me, thoughts would go on and on. I help readers know when to pause. Like this.\" He demonstrates by completing a sentence perfectly.",
         "choices": [
-          { "text": "Start a new adventure", "next": "start" }
+          { "text": "Meet another mark", "next": "watchArrivals" },
+          { "text": "Help with a sentence", "next": "helpSentence" }
         ]
       },
-      "mountainRoute": {
-        "text": "The mountain path winds ever upward, growing narrower with each turn. Sharp rocks tear at your boots, and the thin air makes every step a challenge. As you round a bend, you come face to face with a massive rockslide blocking the path. Through a small gap, you see movement on the other side—a figure in gleaming armor examining the same obstacle from their direction.",
+      "meetQuestion": {
+        "text": "The Question Mark (?) bounces excitedly. \"Do you want to know what I do? Can you guess my job? Isn't it fun to ask questions?\" He grins. \"I help people ask things and show curiosity! Want to try making a question?\"",
         "choices": [
-          { "text": "Call out to the armored figure", "next": "dragonExit" },
-          { "text": "Find another way around the rockslide", "next": "dragonExit" }
+          { "text": "Meet another mark", "next": "watchArrivals" },
+          { "text": "Help with a sentence", "next": "helpSentence" }
         ]
       },
-      "forestRoute": {
-        "text": "The forest thickens around you, ancient trees blocking out the sunlight. The path is well-worn but clearly not traveled recently. After several hours, you emerge into a clearing where a small, crystal-clear spring bubbles from stone. Beside it sits an old woman tending a fire, her eyes milky with blindness. 'I've been expecting you, dragon-seeker,' she says without turning. 'Come, sit. The water here shows visions to those pure of heart.'",
+      "meetExclamation": {
+        "text": "The Exclamation Mark (!) jumps up and down. \"Wow! This party is amazing! I love showing excitement and strong feelings! Don't you think everything's more fun with enthusiasm!\" He practically sparkles with energy!",
         "choices": [
-          { "text": "Drink from the spring", "next": "dragonExit" },
-          { "text": "Ask the woman about the dragon", "next": "dragonExit" }
+          { "text": "Meet another mark", "next": "watchArrivals" },
+          { "text": "Help with a sentence", "next": "helpSentence" }
         ]
       },
-      "dragonExit": {
-        "text": "Your quest to confront the dragon has only just begun. Many challenges await you on this path, and the fate of the village—perhaps even the kingdom—rests on your shoulders. Will you find a way to defeat the beast, or discover the truth behind the ancient pact? The adventure continues... THE END.",
+      "meetQuotations": {
+        "text": "The Quotation Marks bow together. \"We work as a pair,\" they say. \"We hold important words that people say. Like this: 'Hello!' See how we keep the words safe between us?\" They demonstrate their teamwork.",
+        "choices": [
+          { "text": "Meet another mark", "next": "watchArrivals" },
+          { "text": "Help with a sentence", "next": "helpSentence" }
+        ]
+      },
+      "learnPunctuation": {
+        "text": "The Queen explains: \"Full Stops end sentences (.), Question Marks ask things (?), Exclamation Marks show excitement (!), and Quotation Marks hold spoken words. Together, they make our writing clear!\" 📝",
+        "choices": [
+          { "text": "Meet the marks", "next": "watchArrivals" },
+          { "text": "Help with a sentence", "next": "helpSentence" }
+        ]
+      },
+      "helpSentence": {
+        "text": "Suddenly, a messy sentence stumbles into the party: \"can you help me find my bag\" It looks lost without proper punctuation! The Queen turns to you. \"Will you help fix this sentence?\" 📝",
+        "choices": [
+          { "text": "Make it a question", "next": "fixQuestion" },
+          { "text": "Make it a statement", "next": "fixStatement" }
+        ]
+      },
+      "fixQuestion": {
+        "text": "Working together with the punctuation marks, you help fix the sentence. The Capital Letter stands tall at the start, and the Question Mark hops to the end. Now it reads perfectly: \"Can you help me find my bag?\" Everyone cheers! ✨",
+        "choices": [
+          { "text": "Celebrate success", "next": "partyExit" }
+        ]
+      },
+      "fixStatement": {
+        "text": "With the help of the punctuation marks, you transform the sentence. The Capital Letter leads the way, and the Full Stop provides a perfect ending: \"Can you help me find my bag.\" But wait—doesn't it sound like a question? Maybe try another way! 🤔",
+        "choices": [
+          { "text": "Try making it a question instead", "next": "fixQuestion" }
+        ]
+      },
+      "partyExit": {
+        "text": "Thanks to you and the punctuation marks, the sentence is now clear and proper! The Queen of Grammar smiles proudly. \"Remember,\" she says, \"punctuation marks are the true heroes of writing. They help us express ourselves clearly and beautifully!\" The party continues with perfectly punctuated joy! THE END. 🎉",
         "choices": [
           { "text": "Start a new adventure", "next": "start" }
         ]
       }
     },
-    "wizard-tower": {
+    "tense-machine": {
       "start": {
-        "text": "The Wizard's Tower stands before you, a slender spire of obsidian and moonstone that seems to pierce the very sky. They say no one who enters ever returns the same—if they return at all. Yet rumors speak of knowledge and power beyond imagining for those brave or foolish enough to climb its winding stairs. A silver door gleams at its base, unmarked by handle or keyhole.",
+        "text": "Meet Arjun, an adventurous boy who loves science. In his small workshop, surrounded by tools and gadgets, he's about to unveil his proudest invention—a shiny silver box with glowing buttons. He calls it the Tense Machine. His cat, Meenu, sits beside him curiously watching. What would you like to do?",
         "choices": [
-          { "text": "Place your hand on the door", "next": "wizardExit" },
-          { "text": "Look for another way in", "next": "wizardExit" }
+          { "text": "Examine the machine's buttons", "next": "examineButtons" },
+          { "text": "Ask about the invention", "next": "askInvention" }
         ]
       },
-      "wizardExit": {
-        "text": "The tower's mysteries remain largely unexplored, waiting for a brave soul to unlock its secrets. Perhaps on another visit, you will discover what ancient knowledge and magical artifacts lie within its mystical walls. THE END.",
+      "examineButtons": {
+        "text": "You look at the machine closely. There are three glowing buttons: 🔴 Past (Red), 🟢 Present (Green), and 🔵 Future (Blue). Each button seems to pulse with a mysterious energy. Meenu purrs softly, as if encouraging you to press one.",
+        "choices": [
+          { "text": "Press the Past button", "next": "pastButton" },
+          { "text": "Press the Present button", "next": "presentButton" },
+          { "text": "Press the Future button", "next": "futureButton" }
+        ]
+      },
+      "askInvention": {
+        "text": "Arjun's eyes light up as he explains, 'This is my Tense Machine! It helps us understand how we talk about things that happened before (past), things happening now (present), and things that will happen (future). Want to try it out?' 🔮",
+        "choices": [
+          { "text": "Yes, let's test it!", "next": "examineButtons" },
+          { "text": "Ask how it works first", "next": "machineExplanation" }
+        ]
+      },
+      "machineExplanation": {
+        "text": "'The machine connects grammar to real events,' Arjun explains excitedly. 'Each button shows us how verbs change with time. It's like a time-traveling grammar teacher!' Meenu meows in agreement, pawing at the buttons. 🐱",
+        "choices": [
+          { "text": "Try the machine now", "next": "examineButtons" }
+        ]
+      },
+      "pastButton": {
+        "text": "You press the red Past button 🔴. The machine whirs to life and displays: 'Yesterday, you played cricket with your friends.' Arjun grins, 'I remember that match! I scored a six!' The machine shows how we talk about things that already happened.",
+        "choices": [
+          { "text": "Try another button", "next": "examineButtons" },
+          { "text": "Learn about past tense", "next": "learnPast" }
+        ]
+      },
+      "presentButton": {
+        "text": "The green Present button 🟢 glows as you press it. The screen shows: 'Right now, you play with your brother.' Just then, Arjun's brother calls from the next room, inviting him for a chess game! The machine shows what's happening now.",
+        "choices": [
+          { "text": "Try another button", "next": "examineButtons" },
+          { "text": "Learn about present tense", "next": "learnPresent" }
+        ]
+      },
+      "futureButton": {
+        "text": "Pressing the blue Future button 🔵, the machine comes alive with a soft hum. It displays: 'Tomorrow, you will play football in the park.' Arjun gasps, excited about both the prediction and the grammar lesson about things yet to happen.",
+        "choices": [
+          { "text": "Try another button", "next": "examineButtons" },
+          { "text": "Learn about future tense", "next": "learnFuture" }
+        ]
+      },
+      "learnPast": {
+        "text": "The machine explains: 'Past tense tells us about things that already happened. Words often end in -ed: played, walked, talked. But some are different: ran, went, saw.' Arjun adds, 'Like when I scored that six yesterday!' 📚",
+        "choices": [
+          { "text": "Continue exploring", "next": "grammarExit" }
+        ]
+      },
+      "learnPresent": {
+        "text": "A lesson appears: 'Present tense shows what's happening now. Sometimes we add -s: plays, walks, talks. For I/you/we/they, we use the basic form: play, walk, talk.' Meenu watches the screen intently. 📖",
+        "choices": [
+          { "text": "Continue exploring", "next": "grammarExit" }
+        ]
+      },
+      "learnFuture": {
+        "text": "The machine teaches: 'Future tense shows what will happen later. We use 'will' or 'going to': will play, is going to walk, will talk.' Arjun excitedly plans his tomorrow's game. 🎮",
+        "choices": [
+          { "text": "Continue exploring", "next": "grammarExit" }
+        ]
+      },
+      "grammarExit": {
+        "text": "Thanks to Arjun's amazing Tense Machine, you've learned how language changes with time—past, present, and future. Meenu purrs contentedly as Arjun declares, 'Now we can time travel through grammar!' The machine glows softly, ready for more adventures in language. THE END. ⏰",
         "choices": [
           { "text": "Start a new adventure", "next": "start" }
         ]
