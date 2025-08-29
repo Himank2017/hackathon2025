@@ -5,7 +5,7 @@ const STORIES = {
   science: {
     "materials-mystery": {
       "start": {
-        "text": "Meet three curious friends: Aarav, Meera, and Kabir! Their teacher has given them an exciting challenge: \"Explore your surroundings and discover what different objects are made of.\" The children's eyes light up with excitement. Where would you like to start exploring? 🏡",
+        "text": "[The scene shimmers into view: a bright classroom bathed in golden morning light. Colorful posters about science dance on the walls, and a gentle breeze carries the scent of adventure through the open windows. The sunlight catches specks of dust, making them look like tiny stars floating in the air.]\n\nMeet three curious friends: Aarav, Meera, and Kabir! Their teacher has given them an exciting challenge: \"Explore your surroundings and discover what different objects are made of.\" The children's eyes light up with excitement, and the classroom seems to glow brighter with their enthusiasm. Where would you like to start exploring? 🏡\n\n[The classroom materials around you seem to twinkle, each object eager to share its secrets.]",
         "choices": [
           { "text": "Visit the kitchen", "next": "exploreKitchen" },
           { "text": "Check the living room", "next": "exploreLiving" },
@@ -462,7 +462,7 @@ const STORIES = {
   english: {
     "magical-garden": {
       "start": {
-        "text": "One bright morning, a curious boy named Rohan goes exploring near the forest. In the distance, something catches his eye—a mysterious gate glinting in the sunlight. What kind of gate do you see? 🌸",
+        "text": "[The world around you transforms into a misty morning scene. Dewdrops sparkle like diamonds on every blade of grass, and butterflies with wings of rainbow colors dart between flowers that seem to whisper in the breeze. The air is filled with the sweet perfume of mysterious blooms.]\n\nOne bright morning, a curious boy named Rohan goes exploring near the forest. In the distance, something catches his eye—a mysterious gate glinting in the sunlight. As you watch, the morning mist swirls and dances around the gate, making it appear almost magical. What kind of gate do you see? 🌸\n\n[The grass beneath your feet ripples like a green ocean, and somewhere nearby, a mysterious bird sings a melody that makes the flowers sway.]",
         "choices": [
           { "text": "A sparkling golden gate", "next": "goldenGate" },
           { "text": "An ancient mossy gate", "next": "mossyGate" }
@@ -517,14 +517,14 @@ const STORIES = {
         ]
       },
       "meetFairy": {
-        "text": "Suddenly, in a shower of sparkles, a fairy appears! She wears a dress that changes colors like a prism in sunlight, and carries a wand that trails stardust. She smiles at you and says, \"Welcome, friend! I am the Guardian of Adjectives. Would you like to learn about the magic of describing words?\" 🧚‍♀️",
+        "text": "[A soft chime fills the air like crystal bells, and the garden seems to hold its breath. Tiny motes of light begin to swirl and dance, coalescing into a shimmering form. The very air sparkles with anticipation, and the flowers turn their faces toward the magical display.]\n\nSuddenly, in a shower of sparkles, a fairy appears! She wears a dress that changes colors like a prism in sunlight, and carries a wand that trails stardust. She smiles at you and says, \"Welcome, friend! I am the Guardian of Adjectives. Would you like to learn about the magic of describing words?\" 🧚‍♀️\n\n[Around you, the garden responds to her presence - flowers bloom brighter, leaves whisper secrets to each other, and even the sunbeams seem to dance more joyfully. The air tingles with magical potential, carrying the scent of sun-warmed roses and fresh mint.]",
         "choices": [
           { "text": "Yes, teach me about adjectives!", "next": "learnAdjectives" },
           { "text": "Show me more magical plants", "next": "magicalPlants" }
         ]
       },
       "learnAdjectives": {
-        "text": "The fairy waves her wand, creating glowing words in the air. \"Adjectives are magical words that describe things. Like 'sparkly' stars, 'gentle' breeze, or 'mysterious' garden. They make our world more colorful and interesting!\" ✨",
+        "text": "[The fairy's wand traces graceful arcs through the air, leaving trails of starlight that linger like golden threads. Each movement sends ripples of rainbow light cascading through the garden, making the leaves glitter as if dusted with diamonds. The very air seems to shimmer with anticipation.]\n\nThe fairy waves her wand, creating glowing words in the air. \"Adjectives are magical words that describe things. Like 'sparkly' stars, 'gentle' breeze, or 'mysterious' garden. They make our world more colorful and interesting!\" ✨\n\n[As she speaks, each adjective she mentions comes to life around you - stars actually begin to sparkle overhead despite the daylight, a gentle breeze carries the scent of honeysuckle, and the garden grows more mysterious, with shadows that dance and paths that seem to lead to wonderful adventures.]",
         "choices": [
           { "text": "Practice using adjectives", "next": "practice" },
           { "text": "Explore with new knowledge", "next": "magicalPlants" }
@@ -538,7 +538,7 @@ const STORIES = {
         ]
       },
       "practice": {
-        "text": "The fairy hands you a shimmering notebook that sparkles with rainbow light. \"This is your Adjective Journal. When you write descriptive words in it, the garden comes alive with magic! What would you like to describe first?\" 📖",
+        "text": "[The air grows thick with magical potential, like the moment before a rainbow appears. Tiny sparkles of light dance around you like fireflies made of stardust, and the grass beneath your feet seems to hum with anticipation. The flowers lean in closer, as if eager to hear what you'll say.]\n\nThe fairy hands you a shimmering notebook that sparkles with rainbow light. \"This is your Adjective Journal. When you write descriptive words in it, the garden comes alive with magic! What would you like to describe first?\" 📖\n\n[The notebook's pages seem to ripple like water, catching and reflecting the garden's colors. Each time you move it, it chimes softly like distant wind chimes, and the air around it shimmers with possibilities. You can feel the magic tingling in your fingertips, waiting to transform your words into reality.]",
         "choices": [
           { "text": "Write about the magical garden", "next": "gardenExit" },
           { "text": "Describe the fairy's magic", "next": "gardenExit" }
