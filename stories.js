@@ -3,6 +3,123 @@
 const STORIES = {
   // science subject stories
   science: {
+    "materials-mystery": {
+      "start": {
+        "text": "Meet three curious friends: Aarav, Meera, and Kabir! Their teacher has given them an exciting challenge: \"Explore your surroundings and discover what different objects are made of.\" The children's eyes light up with excitement. Where would you like to start exploring? 🏡",
+        "choices": [
+          { "text": "Visit the kitchen", "next": "exploreKitchen" },
+          { "text": "Check the living room", "next": "exploreLiving" },
+          { "text": "Go to the garden", "next": "exploreGarden" }
+        ]
+      },
+      "exploreKitchen": {
+        "text": "In the bright, sunny kitchen, there are many objects made of different materials. Which one catches your attention? ✨",
+        "choices": [
+          { "text": "Examine the steel spoons", "next": "metalObjects" },
+          { "text": "Look at glass tumblers", "next": "glassObjects" },
+          { "text": "Check plastic bottles", "next": "plasticObjects" }
+        ]
+      },
+      "metalObjects": {
+        "text": "Aarav picks up a shiny steel spoon. \"Look!\" he exclaims. \"Metal is so interesting! It's strong and shiny. When I tap it, it makes a clear sound. And feel how cool it is to touch!\" 🥄",
+        "choices": [
+          { "text": "Learn more about metals", "next": "learnMetal" },
+          { "text": "Explore other materials", "next": "exploreKitchen" }
+        ]
+      },
+      "glassObjects": {
+        "text": "Meera carefully holds up a glass tumbler to the light. \"See how the light passes through? Glass is transparent and delicate. We can see what's inside, but we have to handle it carefully!\" 🥛",
+        "choices": [
+          { "text": "Learn more about glass", "next": "learnGlass" },
+          { "text": "Explore other materials", "next": "exploreKitchen" }
+        ]
+      },
+      "plasticObjects": {
+        "text": "Kabir shows a plastic bottle. \"Feel how light this is! Plastic is flexible and doesn't break easily. Look how it bounces back when I squeeze it gently!\" 🫐",
+        "choices": [
+          { "text": "Learn more about plastic", "next": "learnPlastic" },
+          { "text": "Explore other materials", "next": "exploreKitchen" }
+        ]
+      },
+      "exploreLiving": {
+        "text": "The living room is full of different materials. What would you like to investigate? 🏠",
+        "choices": [
+          { "text": "Touch the wooden chair", "next": "woodObjects" },
+          { "text": "Feel the cotton curtains", "next": "cottonObjects" },
+          { "text": "Play with the rubber ball", "next": "rubberObjects" }
+        ]
+      },
+      "woodObjects": {
+        "text": "Aarav sits on a wooden chair. \"Wood is amazing! It's hard and strong, and each piece has unique patterns. Did you know it comes from trees? The patterns are called wood grain!\" 🪑",
+        "choices": [
+          { "text": "Learn more about wood", "next": "learnWood" },
+          { "text": "Check other materials", "next": "exploreLiving" }
+        ]
+      },
+      "cottonObjects": {
+        "text": "Meera runs her hand along the soft cotton curtains. \"Cotton is so soft and comfortable! It comes from plants and lets air flow through. Perfect for hot days!\" 🌸",
+        "choices": [
+          { "text": "Learn more about cotton", "next": "learnCotton" },
+          { "text": "Check other materials", "next": "exploreLiving" }
+        ]
+      },
+      "rubberObjects": {
+        "text": "Kabir bounces a rubber ball. \"Watch this! Rubber is super stretchy and bouncy. It can change shape when pressed and go back to normal!\" ⚽",
+        "choices": [
+          { "text": "Learn more about rubber", "next": "learnRubber" },
+          { "text": "Check other materials", "next": "exploreLiving" }
+        ]
+      },
+      "exploreGarden": {
+        "text": "Outside in the garden, there are more materials to discover! What would you like to examine? 🌳",
+        "choices": [
+          { "text": "Study clay pots", "next": "clayObjects" },
+          { "text": "Feel woolen clothes", "next": "woolObjects" },
+          { "text": "Examine stones", "next": "stoneObjects" }
+        ]
+      },
+      "clayObjects": {
+        "text": "Aarav examines the clay pots. \"Clay is fascinating! When wet, we can mold it into any shape. After baking, it becomes hard and strong. Look at these beautiful plant pots!\" 🏺",
+        "choices": [
+          { "text": "Learn more about clay", "next": "learnClay" },
+          { "text": "Study other materials", "next": "exploreGarden" }
+        ]
+      },
+      "woolObjects": {
+        "text": "Meera wraps herself in a woolen scarf. \"Wool is so warm and cozy! It comes from sheep and keeps us warm in winter. Feel how soft it is!\" 🧣",
+        "choices": [
+          { "text": "Learn more about wool", "next": "learnWool" },
+          { "text": "Study other materials", "next": "exploreGarden" }
+        ]
+      },
+      "stoneObjects": {
+        "text": "Kabir picks up different stones. \"Each stone is unique! Some are smooth, some rough. They're all natural and very hard. Some even sparkle in the sunlight!\" 🪨",
+        "choices": [
+          { "text": "Learn more about stones", "next": "learnStone" },
+          { "text": "Study other materials", "next": "exploreGarden" }
+        ]
+      },
+      "learnMetal": {
+        "text": "The teacher explains: \"Metals are strong materials that can be shaped when heated. They conduct heat and electricity. That's why we use them for cooking utensils and electrical wires!\" ⚡",
+        "choices": [
+          { "text": "Back to kitchen", "next": "exploreKitchen" },
+          { "text": "Continue exploring", "next": "materialsEnd" }
+        ]
+      },
+      "learnGlass": {
+        "text": "\"Glass is made by heating sand until it melts,\" the teacher shares. \"It's transparent, which means light can pass through it. That's why we use it for windows and drinking vessels!\" 💡",
+        "choices": [
+          { "text": "Back to kitchen", "next": "exploreKitchen" },
+          { "text": "Continue exploring", "next": "materialsEnd" }
+        ]
+      },
+      "materialsEnd": {
+        "text": "Back at school, the teacher smiles proudly. \"You've discovered something important today! Everything around us is made of different materials—each with its own special properties. Metal is strong, glass is transparent, wood is durable, cotton is soft, and so much more! Understanding materials helps us use them wisely and appreciate the world around us.\" The three friends beam with pride, knowing they're now material experts! THE END. 🌟",
+        "choices": [
+          { "text": "Start a new adventure", "next": "start" }
+        ]
+      }
+    },
     "curious-magnet": {
       "start": {
         "text": "You are visiting your grandfather's workshop on a sunny afternoon. As you look around, you notice something interesting - a small iron nail is sticking to a shiny bar. Curious about this phenomenon, what would you like to do?",
@@ -155,6 +272,89 @@ const STORIES = {
     }
   },
 
+  // historical subject stories
+  historical: {
+    "magical-apples": {
+      "start": {
+        "text": "Meet Riya, a curious girl who loves numbers! On a beautiful sunny morning, she decides to go for a walk in the magical forest. The birds are singing, and the trees are swaying gently in the breeze. What would you like Riya to do first? 🌳",
+        "choices": [
+          { "text": "Explore the forest path", "next": "findBasket" },
+          { "text": "Count flowers along the way", "next": "countFlowers" }
+        ]
+      },
+      "countFlowers": {
+        "text": "Riya spots some colorful wildflowers. She counts them: 3 yellow daisies and 4 purple violets. 'I wonder how many flowers that is altogether?' she thinks. Can you help her add them? 3 + 4 = 7 flowers! 🌺",
+        "choices": [
+          { "text": "Continue exploring", "next": "findBasket" },
+          { "text": "Count more flowers", "next": "moreFlowers" }
+        ]
+      },
+      "moreFlowers": {
+        "text": "Riya finds 2 more red roses! Now she has 7 flowers plus 2 more. That makes 9 beautiful flowers! 'Addition is like magic!' she exclaims. 🌹",
+        "choices": [
+          { "text": "Continue the adventure", "next": "findBasket" }
+        ]
+      },
+      "findBasket": {
+        "text": "Under a big, old tree, Riya discovers a shiny basket. Inside are 5 bright red apples! 'What a wonderful find!' she exclaims. Just then, a friendly squirrel appears with more apples. 🍎",
+        "choices": [
+          { "text": "Accept squirrel's gift", "next": "addApples" },
+          { "text": "Thank the squirrel", "next": "addApples" }
+        ]
+      },
+      "addApples": {
+        "text": "The friendly squirrel gives Riya 3 more apples! 'Now I need to add my apples,' Riya says. She had 5 apples, and got 3 more. Can you help her count? 5 + 3 = 8 apples! 'Addition makes my basket fuller!' 🐿️",
+        "choices": [
+          { "text": "Continue walking", "next": "meetBrother" },
+          { "text": "Count apples again", "next": "recount" }
+        ]
+      },
+      "recount": {
+        "text": "Riya double-checks her counting: '1, 2, 3, 4, 5, 6, 7, 8... Yes! Eight delicious apples! Addition helped me keep track of my new apples!' 🍎",
+        "choices": [
+          { "text": "Continue the journey", "next": "meetBrother" }
+        ]
+      },
+      "meetBrother": {
+        "text": "On her way home, Riya meets her little brother Aarav, who looks hungry. She has 8 apples in her basket. How many should she share with him? 👦",
+        "choices": [
+          { "text": "Give 2 apples", "next": "subtractApples" },
+          { "text": "Count apples first", "next": "countBeforeShare" }
+        ]
+      },
+      "countBeforeShare": {
+        "text": "Riya counts her apples again: '8 apples is plenty to share! I can give some to Aarav.' She decides to give him 2 apples. 🍎",
+        "choices": [
+          { "text": "Share the apples", "next": "subtractApples" }
+        ]
+      },
+      "subtractApples": {
+        "text": "After giving 2 apples to Aarav, Riya needs to subtract to find out how many she has left. She had 8 apples and gave away 2. Can you help her? 8 - 2 = 6 apples remain! 'Subtraction helps me know what's left!' she realizes. ➖",
+        "choices": [
+          { "text": "Learn about math magic", "next": "mathMagic" },
+          { "text": "Head home", "next": "goHome" }
+        ]
+      },
+      "mathMagic": {
+        "text": "Riya realizes something wonderful: 'Addition helps me when I get more things, and subtraction helps me when I share or give things away! Numbers are like magical friends!' ✨",
+        "choices": [
+          { "text": "Complete the adventure", "next": "storyEnd" }
+        ]
+      },
+      "goHome": {
+        "text": "Walking home with her remaining apples, Riya thinks about her amazing day. She used addition to count what she received and subtraction to share with others. 'Math makes everything more fun!' she smiles. 🌟",
+        "choices": [
+          { "text": "Complete the adventure", "next": "storyEnd" }
+        ]
+      },
+      "storyEnd": {
+        "text": "Riya learned that numbers are wonderful tools that help us in daily life. Addition lets us combine things together, while subtraction helps us share and find what remains. From that day on, Riya saw math everywhere in her adventures - from counting stars to sharing sweets with friends. THE END. ✨",
+        "choices": [
+          { "text": "Start a new adventure", "next": "start" }
+        ]
+      }
+    }
+  },
   // english subject stories
   english: {
     "magical-garden": {
