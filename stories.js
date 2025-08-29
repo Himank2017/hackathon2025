@@ -157,9 +157,100 @@ const STORIES = {
 
   // english subject stories
   english: {
+    "magical-garden": {
+      "start": {
+        "text": "One bright morning, a curious boy named Rohan goes exploring near the forest. In the distance, something catches his eye—a mysterious gate glinting in the sunlight. What kind of gate do you see? 🌸",
+        "choices": [
+          { "text": "A sparkling golden gate", "next": "goldenGate" },
+          { "text": "An ancient mossy gate", "next": "mossyGate" }
+        ]
+      },
+      "goldenGate": {
+        "text": "The magnificent golden gate stands before you, its surface shimmering with magical energy. Behind it, you glimpse a garden unlike any you've ever seen. As you approach, the gate slowly swings open, inviting you into a world of wonder. 🏰",
+        "choices": [
+          { "text": "Explore the rose garden", "next": "roseGarden" },
+          { "text": "Visit the sunflower patch", "next": "sunflowerPatch" },
+          { "text": "Check out the tulip field", "next": "tulipField" }
+        ]
+      },
+      "mossyGate": {
+        "text": "The ancient gate is covered in soft, emerald moss that seems to glow with its own gentle light. As you touch it, the gate recognizes a friend and creaks open to reveal a magical garden within. ✨",
+        "choices": [
+          { "text": "Explore the rose garden", "next": "roseGarden" },
+          { "text": "Visit the sunflower patch", "next": "sunflowerPatch" },
+          { "text": "Check out the tulip field", "next": "tulipField" }
+        ]
+      },
+      "roseGarden": {
+        "text": "You enter a section filled with roses. How would you describe these magical flowers? Each rose seems to be...",
+        "choices": [
+          { "text": "Glowing with rainbow colors", "next": "deeperGarden1" },
+          { "text": "Dancing in the breeze", "next": "deeperGarden1" },
+          { "text": "Singing soft melodies", "next": "deeperGarden1" }
+        ]
+      },
+      "sunflowerPatch": {
+        "text": "You discover a patch of extraordinary sunflowers. How do these magical sunflowers appear to you? They look...",
+        "choices": [
+          { "text": "Gigantic and friendly", "next": "deeperGarden1" },
+          { "text": "Sparkly and golden", "next": "deeperGarden1" },
+          { "text": "Cheerful and bouncing", "next": "deeperGarden1" }
+        ]
+      },
+      "tulipField": {
+        "text": "You come across a field of magical tulips. When you touch their petals, they feel...",
+        "choices": [
+          { "text": "Soft as silk clouds", "next": "deeperGarden1" },
+          { "text": "Warm like sunshine", "next": "deeperGarden1" },
+          { "text": "Cool as morning dew", "next": "deeperGarden1" }
+        ]
+      },
+      "deeperGarden1": {
+        "text": "As you walk deeper into the garden, you discover three magical plants. Which one catches your attention? 🌿",
+        "choices": [
+          { "text": "A crystal-covered cactus", "next": "meetFairy" },
+          { "text": "A rainbow-swirled vine", "next": "meetFairy" },
+          { "text": "A star-sprinkled daisy", "next": "meetFairy" }
+        ]
+      },
+      "meetFairy": {
+        "text": "Suddenly, in a shower of sparkles, a fairy appears! She wears a dress that changes colors like a prism in sunlight, and carries a wand that trails stardust. She smiles at you and says, \"Welcome, friend! I am the Guardian of Adjectives. Would you like to learn about the magic of describing words?\" 🧚‍♀️",
+        "choices": [
+          { "text": "Yes, teach me about adjectives!", "next": "learnAdjectives" },
+          { "text": "Show me more magical plants", "next": "magicalPlants" }
+        ]
+      },
+      "learnAdjectives": {
+        "text": "The fairy waves her wand, creating glowing words in the air. \"Adjectives are magical words that describe things. Like 'sparkly' stars, 'gentle' breeze, or 'mysterious' garden. They make our world more colorful and interesting!\" ✨",
+        "choices": [
+          { "text": "Practice using adjectives", "next": "practice" },
+          { "text": "Explore with new knowledge", "next": "magicalPlants" }
+        ]
+      },
+      "magicalPlants": {
+        "text": "The fairy leads you to a special part of the garden where the plants respond to adjectives. \"Try describing what you see,\" she encourages. \"The more descriptive your words, the more magical the garden becomes!\" 🌺",
+        "choices": [
+          { "text": "Describe the flowers", "next": "practice" },
+          { "text": "Create new plants", "next": "practice" }
+        ]
+      },
+      "practice": {
+        "text": "The fairy hands you a shimmering notebook that sparkles with rainbow light. \"This is your Adjective Journal. When you write descriptive words in it, the garden comes alive with magic! What would you like to describe first?\" 📖",
+        "choices": [
+          { "text": "Write about the magical garden", "next": "gardenExit" },
+          { "text": "Describe the fairy's magic", "next": "gardenExit" }
+        ]
+      },
+      "gardenExit": {
+        "text": "As you write in your magical notebook, the garden responds to your adjectives! Flowers grow more vibrant, vines dance with new energy, and everything seems more alive. The fairy beams with pride. \"Remember,\" she says, \"adjectives are like magic spells that make our words paint beautiful pictures!\" You promise to keep using descriptive words to make your stories as magical as this enchanted garden. THE END. 🌈✨",
+        "choices": [
+          { "text": "Start a new adventure", "next": "start" }
+        ]
+      }
+    },
     "grammar-battle": {
       "start": {
-        "text": "Welcome to Grammar Town! Here live three best friends who protect good sentences: Noun (who gives names), Verb (who shows action), and Adjective (who adds descriptions). The town is peaceful until one day, a dark cloud appears on the horizon... What would you like to do? 🏰",
+        "text": "Welcome to the magical Grammar Town! 🌈 Here, candy-colored houses line streets paved with golden cobblestones, and rainbow fountains sparkle in sunlit squares. Three extraordinary best friends protect this enchanted place: Noun (who wears a crown of crystal letters), Verb (who dances in a cape of swirling rainbow energy), and Adjective (who floats on a cloud of shimmering colors). The town glows with magical light until one day, a swirling purple cloud appears on the horizon... What would you like to do? 🏰✨",
         "choices": [
           { "text": "Meet the grammar friends", "next": "meetFriends" },
           { "text": "Watch the dark cloud", "next": "darkCloud" }
@@ -262,7 +353,7 @@ const STORIES = {
     },
     "punctuation-party": {
       "start": {
-        "text": "Welcome to the magical land of Grammar, where words live in colorful houses! But something isn't quite right—the sentences are messy and confusing. Suddenly, a royal announcement echoes through the streets: \"Tonight, we shall hold the Punctuation Party! Everyone must attend.\" What would you like to do? ✨",
+        "text": "Welcome to the enchanted land of Grammar, where words live in houses made of crystal prisms that shower rainbows across flower-lined streets! Each house sparkles with its own magical glow—some pulse with sapphire light, others shimmer with emerald and ruby hues. But something isn't quite right—the sentences are as tangled as a garden of confused butterflies. Suddenly, a royal announcement echoes through the streets, carried by glowing paper airplanes that leave trails of golden sparkles: \"Tonight, we shall hold the Punctuation Party! Everyone must attend.\" What would you like to do? ✨🌟",
         "choices": [
           { "text": "Head to the palace", "next": "enterPalace" },
           { "text": "Watch the punctuation marks arrive", "next": "watchArrivals" }
@@ -354,7 +445,7 @@ const STORIES = {
     },
     "tense-machine": {
       "start": {
-        "text": "Meet Arjun, an adventurous boy who loves science. In his small workshop, surrounded by tools and gadgets, he's about to unveil his proudest invention—a shiny silver box with glowing buttons. He calls it the Tense Machine. His cat, Meenu, sits beside him curiously watching. What would you like to do?",
+        "text": "Meet Arjun, an adventurous boy who loves science, his eyes sparkling like stars discovering new galaxies. In his magical workshop, where rainbow-colored light dances through crystal wind chimes and bounces off walls covered in shimmering diagrams, he's about to unveil his proudest invention. It's a magnificent machine that seems to capture starlight itself—a box of polished silver that glows like moonlight, with buttons that pulse with enchanted colors: one red like a sunset, one green like spring leaves, and one blue like ocean waves. He calls it the Tense Machine. His cat, Meenu, a fluffy orange cloud with golden eyes that shine like tiny suns, sits beside him on a cushion embroidered with swirling time spirals. What would you like to do? 🌟",
         "choices": [
           { "text": "Examine the machine's buttons", "next": "examineButtons" },
           { "text": "Ask about the invention", "next": "askInvention" }
@@ -434,6 +525,85 @@ const STORIES = {
   
   // Mystery subject stories
   mystery: {
+    "british-rule": {
+      "start": {
+        "text": "Welcome to the time-traveling archives! You've been chosen to explore the fascinating history of India, once known as the 'Golden Bird' 🌏. Before you are three mystical scrolls, each holding different parts of this important story. Which scroll would you like to read first?",
+        "choices": [
+          { "text": "The Golden Bird and Early Trade", "next": "goldenBird" },
+          { "text": "The Rise of Company Rule", "next": "companyRule" },
+          { "text": "The Path to Freedom", "next": "freedomPath" }
+        ]
+      },
+      "goldenBird": {
+        "text": "As you open the first scroll, images of ancient India shimmer before your eyes. You see bustling markets filled with precious silks, fragrant spices, and glittering gems. Traders from distant lands arrive on ships, drawn by India's legendary wealth. Among them, you notice British merchants of the East India Company arriving in the 1600s. 🏺",
+        "choices": [
+          { "text": "Explore the trading centers", "next": "tradeCenters" },
+          { "text": "Learn about Indian treasures", "next": "indianTreasures" },
+          { "text": "Watch the British traders", "next": "britishTraders" }
+        ]
+      },
+      "tradeCenters": {
+        "text": "The scroll reveals four major trading centers: Surat with its busy ports, Madras (now Chennai) with its fort, Bombay (now Mumbai) with its harbor, and Calcutta (now Kolkata) along the river. Each center tells a story of commerce, culture, and growing British influence. 🏰",
+        "choices": [
+          { "text": "Investigate British motives", "next": "companyRule" },
+          { "text": "Learn about local rulers", "next": "localRulers" }
+        ]
+      },
+      "indianTreasures": {
+        "text": "You discover the richness of India's treasures: finest cotton and silk textiles, exotic spices that European kings craved, precious gems that adorned palaces, and advanced crafts that amazed the world. No wonder India was called the 'Golden Bird'! ✨",
+        "choices": [
+          { "text": "See how trade changed", "next": "companyRule" },
+          { "text": "Explore cultural exchange", "next": "culturalExchange" }
+        ]
+      },
+      "companyRule": {
+        "text": "The second scroll glows with a darker energy. It shows how the East India Company transformed from traders to rulers. The Battle of Plassey in 1757 appears—a turning point where betrayal and cunning led to British control over Bengal, India's richest province. 🗡️",
+        "choices": [
+          { "text": "Learn about the changes", "next": "colonialChanges" },
+          { "text": "Witness people's struggles", "next": "peopleStruggle" }
+        ]
+      },
+      "colonialChanges": {
+        "text": "You see dramatic changes: farmers forced to grow indigo and cotton instead of food, heavy taxes crushing the people, and ancient industries like weaving being destroyed. But you also notice new railways cutting across the land, telegraph lines connecting cities, and schools teaching in English. 🚂",
+        "choices": [
+          { "text": "Explore the resistance", "next": "resistance" },
+          { "text": "Learn about education", "next": "education" }
+        ]
+      },
+      "resistance": {
+        "text": "The scroll shows the brave revolt of 1857—soldiers and citizens rising against Company rule. Though the revolt was crushed, it forced a change: the British Crown took direct control of India. But the spark of resistance had been lit... ⚔️",
+        "choices": [
+          { "text": "Meet freedom fighters", "next": "freedomPath" },
+          { "text": "Learn about peaceful protests", "next": "gandhiPath" }
+        ]
+      },
+      "freedomPath": {
+        "text": "The final scroll radiates with hope. You see great leaders emerging: Dadabhai Naoroji exposing British exploitation, Tilak demanding 'Swaraj' (self-rule), Gandhi leading peaceful protests, Bose building an army, and Bhagat Singh inspiring the youth. 🕊️",
+        "choices": [
+          { "text": "Follow Gandhi's path", "next": "gandhiPath" },
+          { "text": "Learn about other leaders", "next": "otherLeaders" }
+        ]
+      },
+      "gandhiPath": {
+        "text": "Gandhi's unique way of fighting appears: using truth and non-violence (Satyagraha). You witness the historic Salt March, where thousands walked to protest unjust salt laws, and the powerful Quit India Movement that shook British rule. 🧂",
+        "choices": [
+          { "text": "Join the Salt March", "next": "saltMarch" },
+          { "text": "Experience Independence", "next": "independence" }
+        ]
+      },
+      "saltMarch": {
+        "text": "You walk alongside Gandhi and thousands of Indians in the Salt March. The determination in their eyes, the peaceful resistance against unjust laws, and the unity of people from all backgrounds shows you the power of non-violent protest. ✊",
+        "choices": [
+          { "text": "See the impact", "next": "independence" }
+        ]
+      },
+      "independence": {
+        "text": "Finally, you reach the historic moment: August 15, 1947. The Indian flag rises over a free nation as the British flag comes down. You understand now that India's freedom came through unity, courage, and the determination of countless people who never gave up. 🇮🇳 THE END.",
+        "choices": [
+          { "text": "Start a new adventure", "next": "start" }
+        ]
+      }
+    },
     "grid-adventure": {
       "start": {
         "text": "The sea sparkles as you join Maya and her friends—Sam, Aisha, and Leo—stepping onto the golden sands of Map Island 🏝️. Maya holds a mysterious map filled with squares marked with letters and numbers. 'Look!' Maya exclaims, 'It's a grid map! The first clue says: D4.' What would you like to do?",
